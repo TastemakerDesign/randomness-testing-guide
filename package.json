@@ -6,9 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check src",
-    "deployStaging": "vercel deploy",
-    "deployProduction": "vercel deploy --prod"
+    "lint": "biome check src"
   },
   "dependencies": {
     "crypto-js": "^4.2.0",
@@ -29,7 +27,6 @@
     "@types/react-dom": "^19.2.2",
     "@types/react-katex": "^3.0.4",
     "tailwindcss": "^4.1.16",
-    "typescript": "^5.9.3",
-    "vercel": "^48.6.0"
+    "typescript": "^5.9.3"
   }
 }
