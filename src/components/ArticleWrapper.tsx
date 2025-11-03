@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navigationItems } from "./Sidebar/navigationItems";
+import { navigationItems } from "@/src/components/Sidebar/navigationItems";
 
 export function ArticleWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -39,7 +39,9 @@ export function ArticleWrapper({ children }: { children: React.ReactNode }) {
                 Next →
               </span>
             </div>
-            <span className="font-bold text-white text-right">{nextPage.name}</span>
+            <span className="font-bold text-white text-right">
+              {nextPage.name}
+            </span>
           </Link>
         )}
       </div>
