@@ -24,8 +24,8 @@ export default function Page() {
           frequencyTest,
           blockFrequencyTest(10),
           runsTest,
-          wordFrequencyTest(8),
-          autocorrelationTest(8),
+          wordFrequencyTest(4),
+          autocorrelationTest(4),
         ]}
       />
       <p>

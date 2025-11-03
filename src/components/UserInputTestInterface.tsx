@@ -33,11 +33,6 @@ export function UserInputTestInterface({
     }
     setResults(testResults);
   };
-  const clearInput = () => {
-    setInputValue("");
-    setResults(null);
-    setError("");
-  };
 
   return (
     <div className="border border-neutral-600 rounded-lg overflow-hidden bg-neutral-900">
@@ -51,7 +46,6 @@ export function UserInputTestInterface({
             onChange={handleInputChange}
             placeholder="101010101010..."
             className="w-full px-3 py-2 bg-neutral-800 border border-neutral-600 rounded text-base font-mono resize-y min-h-[100px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            disabled={results !== null}
           />
           {error && <span className="text-red-400 text-sm">{error}</span>}
           {inputValue && (
@@ -63,23 +57,14 @@ export function UserInputTestInterface({
         </div>
 
         <div className="flex gap-2">
-          {results === null ? (
-            <button
-              onClick={runTests}
-              disabled={inputValue.length === 0}
-              className="px-4 py-2 bg-blue-800 text-white text-sm rounded hover:bg-blue-700 transition-colors disabled:bg-neutral-700 disabled:cursor-not-allowed flex items-center gap-2"
-            >
-              Run Test
-              <span className="text-base">▶</span>
-            </button>
-          ) : (
-            <button
-              onClick={clearInput}
-              className="px-4 py-2 bg-neutral-700 text-white text-sm rounded hover:bg-neutral-600 transition-colors"
-            >
-              Reset
-            </button>
-          )}
+          <button
+            onClick={runTests}
+            disabled={inputValue.length === 0}
+            className="px-4 py-2 bg-blue-800 text-white text-sm rounded hover:bg-blue-700 transition-colors disabled:bg-neutral-700 disabled:cursor-not-allowed flex items-center gap-2"
+          >
+            Run Test
+            <span className="text-base">▶</span>
+          </button>
         </div>
       </div>
       {results && results.length > 0 && (
