@@ -41,7 +41,7 @@ export default function Page() {
         know is{" "}
         <i>how likely are we to see 1 or fewer heads or 1 or fewer tails</i>?
       </p>
-      <BlockMath math="\text{Pr(} \leq \text{1 heads } | \leq \text{1 tails} \text{)}   = 2 \left( \left(\frac{1}{2}\right)^{10} + 10 \left( \frac{1}{2} \right)^{1} \left( \frac{1}{2} \right)^{9} \right) = \frac{1}{512} \approx 2.1\%" />
+      <BlockMath math="\text{Pr(} \leq \text{1 heads } | \leq \text{1 tails} \text{)}   = 2 \left( \left(\frac{1}{2}\right)^{10} + 10 \left( \frac{1}{2} \right)^{1} \left( \frac{1}{2} \right)^{9} \right) = \frac{11}{512} \approx 2.1\%" />
       <p>
         What about if we have 2 heads and 8 tails? The calculations for this
         become very tedious very quick. And keep in mind this becomes even more
