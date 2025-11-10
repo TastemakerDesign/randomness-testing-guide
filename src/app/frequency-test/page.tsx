@@ -52,7 +52,7 @@ export default function Page() {
         </li>
       </ArticleBulletList>
       <p>
-        We can calculate the <InlineMath math="\chi_{2}" /> with 1 degree of
+        We can calculate the <InlineMath math="\chi^{2}" /> with 1 degree of
         freedom as follows.
       </p>
       <BlockMath math="\chi^{2}_{1} = \frac{(20 - 10)^2}{10} + \frac{(0 - 10)^2}{10} = 20" />
