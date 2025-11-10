@@ -9,7 +9,8 @@ export default function Page() {
       <ChangelogCard
         date="November 10, 2025"
         changes={[
-          '[Goodness of Fit] Use the word "or" instead of the symbol "|" to avoid confusion with conditional probability',
+          '[Goodness of Fit] Changed the symbol "|" to the word "or" to avoid confusion with conditional probability',
+          "[Goodness of Fit] Fixed a typo in the calculation of one of the probabilities",
         ]}
       />
       <ChangelogCard
