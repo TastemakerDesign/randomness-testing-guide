@@ -12,6 +12,7 @@ export default function Page() {
           '[Goodness of Fit] Changed the symbol "|" to the word "or" to avoid confusion with conditional probability',
           "[Goodness of Fit] Fixed a typo in the calculation of one of the probabilities",
           "[Goodness of Fit] Removed the incorrect probability formula involving the chi-squared statistic and degrees of freedom",
+          '[Goodness of Fit] Added the "Chi-Squared Test Assumptions" section to make it clear that that chi-squared test cannot be applied blindly in all cases',
           '[Block Frequency Test] Clarified the "precision issue" that occurs with the current JavaScript implementation of p-value calculations',
           '[Runs Test] Rewrote the article to completely avoid the nonsensical usage of "infinite degrees of freedom"',
         ]}

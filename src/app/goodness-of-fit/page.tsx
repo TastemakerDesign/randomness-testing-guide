@@ -129,6 +129,23 @@ export default function Page() {
         <i>approximation</i> that doesn't perfectly match our given scenario.
         However, for practical purposes, it is a "good enough" approximation.
       </p>
+      <ArticleSectionTitle>Chi-Squared Test Assumptions</ArticleSectionTitle>
+      <p>
+        It is very important to mention that the chi-squared test is only valid
+        when both of the following assumptions to be true.
+      </p>
+      <ArticleBulletList>
+        <li>
+          The sample size must be large enough for the central limit theorem to
+          be applicable. For the chi-squared test, the expected count per
+          category should be greater than 5.
+        </li>
+        <li>
+          The observations should be independent. If dependencies do exist
+          between observations, then the calculated probabilities will not be
+          correct.
+        </li>
+      </ArticleBulletList>
       <ArticleSectionTitle>Fair Die?</ArticleSectionTitle>
       <p>
         If we were to roll a die 36 times, we would expect to see roughly 6
