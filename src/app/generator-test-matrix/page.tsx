@@ -105,7 +105,7 @@ const generators = [
 const tests = [
   { name: "Frequency Test", fn: frequencyTest },
   { name: "Block Frequency Test", fn: blockFrequencyTest(100) },
-  { name: "Runs Test", fn: runsTest },
+  { name: "Runs Test", fn: runsTest(10) },
   { name: "Word Frequency Test", fn: wordFrequencyTest(2) },
   { name: "Autocorrelation Test", fn: autocorrelationTest(8) },
 ];

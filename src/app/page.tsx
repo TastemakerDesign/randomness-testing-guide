@@ -23,7 +23,7 @@ export default function Page() {
         testFunctions={[
           frequencyTest,
           blockFrequencyTest(10),
-          runsTest,
+          runsTest(4),
           wordFrequencyTest(4),
           autocorrelationTest(4),
         ]}

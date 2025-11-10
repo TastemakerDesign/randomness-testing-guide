@@ -213,7 +213,7 @@ export default function Page() {
             sequence: alternatingZerosAndOnesGenerator.generate(100),
           },
         ]}
-        testFunctions={[blockLongestRunTest, runsTest]}
+        testFunctions={[blockLongestRunTest, runsTest(4)]}
       />
       <p>Both tests fail to catch the expected runs test case.</p>
       <TestInterface
@@ -223,7 +223,7 @@ export default function Page() {
             sequence: expectedRunsDistributionGenerator.generate(100),
           },
         ]}
-        testFunctions={[blockLongestRunTest, runsTest]}
+        testFunctions={[blockLongestRunTest, runsTest(4)]}
       />
     </ArticleWrapper>
   );
