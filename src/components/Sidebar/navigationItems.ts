@@ -8,6 +8,7 @@ export const navigationItems = [
   { name: "5. Autocorrelation Test", href: "/autocorrelation-test" },
   { name: "Generator Test Matrix", href: "/generator-test-matrix" },
   { name: "References", href: "/references" },
+  { name: "Changelog", href: "/changelog" },
   {
     name: "Appendix",
     children: [
