@@ -7,6 +7,12 @@ export default function Page() {
     <ArticleWrapper>
       <ArticleChapterTitle>Changelog</ArticleChapterTitle>
       <ChangelogCard
+        date="November 10, 2025"
+        changes={[
+          '[Goodness of Fit] Use the word "or" instead of the symbol "|" to avoid confusion with conditional probability',
+        ]}
+      />
+      <ChangelogCard
         date="November 3, 2025"
         changes={["Initial release of the Randomness Testing Guide"]}
       />
