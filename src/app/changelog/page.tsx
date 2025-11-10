@@ -15,6 +15,7 @@ export default function Page() {
           '[Goodness of Fit] Added the "Chi-Squared Test Assumptions" section to make it clear that that chi-squared test cannot be applied blindly in all cases',
           '[Block Frequency Test] Clarified the "precision issue" that occurs with the current JavaScript implementation of p-value calculations',
           '[Runs Test] Rewrote the article to completely avoid the nonsensical usage of "infinite degrees of freedom"',
+          "[Autocorrelation Test] Rewrote the article to address the fact that the overlapping observations are not independent",
         ]}
       />
       <ChangelogCard
