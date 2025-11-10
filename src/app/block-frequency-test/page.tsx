@@ -72,9 +72,9 @@ export default function Page() {
       <p>
         The block frequency test, as implemented in this guide, doesn't work
         correctly with small blocks on large input strings. This is due to a
-        precision issue caused by having a large number of degrees of freedom.
-        However, if the block size is too small, then the chi-squared terms
-        mostly become zero and weaken the statistical test.
+        floating-point precision issue caused by having a large number of
+        degrees of freedom. (One of the numbers in the calculation of the
+        p-value becomes NaN.)
       </p>
     </ArticleWrapper>
   );
