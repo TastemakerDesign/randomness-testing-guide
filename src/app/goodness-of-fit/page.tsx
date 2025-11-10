@@ -111,18 +111,18 @@ export default function Page() {
         freedom as a subscript, like <InlineMath math="\chi^{2}_{1}" />.
       </p>
       <p>
-        Now what do we do with our magic <InlineMath math="\chi^{2}" /> value?
-        There is a magic formula that let's us calculate the probability that
-        the observed distribution of values is equally or more different than
-        the expected distribution of values. (To be clear, the formula isn't
-        exactly "magic", but it's magical enough that the explanation is best
-        left for another time.)
+        Now what do we do with our <InlineMath math="\chi^{2}" /> value? There
+        is a magic formula that let's us calculate the probability that the
+        observed distribution of values is equally or more different than the
+        expected distribution of values. (To be clear, the formula isn't exactly
+        "magic", but it's magical enough that the explanation is best left for
+        another time.)
       </p>
       <p>
         With <InlineMath math="\chi^{2} = 6.4" /> and the degrees of freedom
         equal to 1, we can calculate the probability:
       </p>
-      <BlockMath math="\text{Probability} = 1 - \frac{\gamma\left(\frac{1}{2}, \frac{6.4}{2}\right)}{\Gamma\left(\frac{1}{2}\right)} = 1 - \frac{3.2^{0.5} \cdot e^{-3.2} \sum_{n=0}^{\infty} \frac{3.2^n}{0.5 + n}}{\sqrt{\pi}} \approx 1.1\%" />
+      <BlockMath math="\text{Probability} = 1 - \frac{\gamma\left(\frac{1}{2}, \frac{6.4}{2}\right)}{\Gamma\left(\frac{1}{2}\right)} \approx 1.1\%" />
       <p>
         You might notice that the 1.1% we just calculated differs from the 2.1%
         we calculated previously. This is because the chi-squared test is an{" "}

@@ -11,6 +11,7 @@ export default function Page() {
         changes={[
           '[Goodness of Fit] Changed the symbol "|" to the word "or" to avoid confusion with conditional probability',
           "[Goodness of Fit] Fixed a typo in the calculation of one of the probabilities",
+          "[Goodness of Fit] Removed the incorrect probability formula involving the chi-squared statistic and degrees of freedom",
         ]}
       />
       <ChangelogCard
