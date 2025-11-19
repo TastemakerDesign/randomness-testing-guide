@@ -60,7 +60,7 @@ export function UserInputTestInterface({
           <button
             onClick={runTests}
             disabled={inputValue.length === 0}
-            className="px-4 py-2 bg-blue-800 text-white text-sm rounded hover:bg-blue-700 transition-colors disabled:bg-neutral-700 disabled:cursor-not-allowed flex items-center gap-2"
+            className="px-4 py-2 bg-blue-800 text-white text-sm rounded hover:bg-blue-700 transition-colors disabled:bg-neutral-700 disabled:cursor-not-allowed flex items-center gap-2 cursor-pointer"
           >
             Run Test
             <span className="text-base">▶</span>

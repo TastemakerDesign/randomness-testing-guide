@@ -30,7 +30,7 @@ export function TestCaseAccordion({
         {!caseResults || caseResults.length === 0 ? (
           <button
             onClick={onRunTests}
-            className="px-4 py-2 bg-blue-800 text-white text-sm rounded hover:bg-blue-700 transition-colors shrink-0 flex items-center gap-2 w-[120px] h-[38px] justify-center"
+            className="px-4 py-2 bg-blue-800 text-white text-sm rounded hover:bg-blue-700 transition-colors shrink-0 flex items-center gap-2 w-[120px] h-[38px] justify-center cursor-pointer"
           >
             Run Test
             <span className="text-base">▶</span>

@@ -59,7 +59,7 @@ export function SidebarContents({
                 <li key={item.name}>
                   <button
                     onClick={toggleAppendix}
-                    className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors"
+                    className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors cursor-pointer"
                   >
                     <span>{item.name}</span>
                     <IoChevronDown
