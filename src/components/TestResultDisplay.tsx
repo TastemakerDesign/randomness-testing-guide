@@ -35,7 +35,7 @@ export function TestResultDisplay({ result }: { result: TestResult }) {
           <p className="font-semibold text-sm">
             {parseFloat(result.pValue) >= 0.01 ? "✓ PASS" : "✗ FAIL"}
           </p>
-          <p className="text-xs">
+          <p className="text-sm">
             {parseFloat(result.pValue) >= 0.01
               ? "The sequence appears random for this test."
               : "The sequence does not appear random for this test."}

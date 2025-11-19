@@ -22,7 +22,7 @@ export function MobileHeader({
         </Link>
         <button
           onClick={toggleMenu}
-          className="p-2 hover:bg-neutral-800 rounded-lg transition-colors"
+          className="p-2 hover:bg-neutral-800 rounded-lg transition-colors cursor-pointer"
         >
           <svg
             className="w-6 h-6"

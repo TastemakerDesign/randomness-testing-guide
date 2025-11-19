@@ -22,7 +22,7 @@ export function ArticleWrapper({ children }: { children: React.ReactNode }) {
             className="flex-1 flex flex-col items-start gap-3 md:gap-1 p-4 bg-neutral-900 border border-neutral-700 rounded-lg shadow-sm hover:shadow-lg hover:bg-neutral-800 hover:border-neutral-600 transition-all"
           >
             <div className="flex items-center gap-2">
-              <span className="text-xs text-neutral-400 uppercase tracking-wide font-semibold">
+              <span className="text-sm text-neutral-400 uppercase tracking-wide font-semibold">
                 ← Previous
               </span>
             </div>
@@ -35,7 +35,7 @@ export function ArticleWrapper({ children }: { children: React.ReactNode }) {
             className="flex-1 flex flex-col items-end gap-3 md:gap-1 p-4 bg-neutral-900 border border-neutral-700 rounded-lg shadow-sm hover:shadow-lg hover:bg-neutral-800 hover:border-neutral-600 transition-all"
           >
             <div className="flex items-center gap-2">
-              <span className="text-xs text-neutral-400 uppercase tracking-wide font-semibold">
+              <span className="text-sm text-neutral-400 uppercase tracking-wide font-semibold">
                 Next →
               </span>
             </div>

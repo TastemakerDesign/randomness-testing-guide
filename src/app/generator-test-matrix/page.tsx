@@ -80,7 +80,7 @@ export default function Page() {
                       <div className="font-semibold">
                         {passed ? "PASS" : "FAIL"}
                       </div>
-                      <div className="text-xs">p={pValue.toFixed(4)}</div>
+                      <div className="text-sm">p={pValue.toFixed(4)}</div>
                     </td>
                   );
                 })}
