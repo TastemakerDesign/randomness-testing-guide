@@ -1,3 +1,4 @@
+import { HiExternalLink } from "react-icons/hi";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
@@ -114,9 +115,18 @@ export default function Page() {
         Now what do we do with our <InlineMath math="\chi^{2}" /> value? There
         is a magic formula that let's us calculate the probability that the
         observed distribution of values is equally or more different than the
-        expected distribution of values. (To be clear, the formula isn't exactly
-        "magic", but it's magical enough that the explanation is best left for
-        another time.)
+        expected distribution of values. (You can read more about this "magic"
+        formula at{" "}
+        <a
+          href="https://matthewfeickert.github.io/Statistics-Notes/notebooks/Introductory/Chi-Squared-Distribution.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-300 hover:text-blue-200 inline-flex items-center gap-1"
+        >
+          in this article
+          <HiExternalLink className="shrink-0" />
+        </a>
+        .)
       </p>
       <p>
         With <InlineMath math="\chi^{2} = 6.4" /> and the degrees of freedom

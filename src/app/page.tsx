@@ -34,6 +34,8 @@ export default function Page() {
         Today, AES is used by{" "}
         <a
           href="https://nordvpn.com/features/vpn-encryption/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-blue-300 hover:text-blue-200 inline-flex items-center gap-1"
         >
           many
@@ -41,6 +43,8 @@ export default function Page() {
         </a>{" "}
         <a
           href="https://www.expressvpn.com/what-is-vpn/vpn-encryption"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-blue-300 hover:text-blue-200 inline-flex items-center gap-1"
         >
           VPN
@@ -48,6 +52,8 @@ export default function Page() {
         </a>{" "}
         <a
           href="https://mullvad.net/en/why-mullvad-vpn"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-blue-300 hover:text-blue-200 inline-flex items-center gap-1"
         >
           providers
@@ -56,6 +62,8 @@ export default function Page() {
         as part of the OpenVPN standard. It is also used by default by{" "}
         <a
           href="https://www.7-zip.org/7z.html"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-blue-300 hover:text-blue-200 inline-flex items-center gap-1"
         >
           7-zip
