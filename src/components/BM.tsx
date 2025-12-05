@@ -1,5 +1,5 @@
-
+import { BlockMath } from "react-katex";
 
 export function BM({ math }: { math: string }) {
-  return <BM math={math} />;
+  return <BlockMath math={math} />;
 }
