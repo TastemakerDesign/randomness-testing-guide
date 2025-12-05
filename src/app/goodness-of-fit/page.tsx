@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { HiExternalLink } from "react-icons/hi";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
-import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
+import { H2 } from "@/src/components/H2";
 
 export const metadata: Metadata = {
   title: "Goodness of Fit | Randomness Testing Guide",
@@ -16,7 +16,7 @@ export default function Page() {
   return (
     <ArticleWrapper>
       <H1>Goodness of Fit</H1>
-      <ArticleSectionTitle>Fair Coin?</ArticleSectionTitle>
+      <H2>Fair Coin?</H2>
       <p>
         If we were to flip a coin 10 times, we would expect to see roughly 5
         heads and 5 tails. Let's assign <InlineMath math="0" /> to heads and{" "}
@@ -56,7 +56,7 @@ export default function Page() {
         annoying if we scale up to 100 coin flips, or even 1000. Clearly, we
         need a better approach.
       </p>
-      <ArticleSectionTitle>The Chi-Squared Test</ArticleSectionTitle>
+      <H2>The Chi-Squared Test</H2>
       <p>
         To determine whether an observed distribution of values matches an
         expected distribution of values, we can use a chi-squared test,
@@ -146,7 +146,7 @@ export default function Page() {
         <i>approximation</i> that doesn't perfectly match our given scenario.
         However, for practical purposes, it is a "good enough" approximation.
       </p>
-      <ArticleSectionTitle>Chi-Squared Test Assumptions</ArticleSectionTitle>
+      <H2>Chi-Squared Test Assumptions</H2>
       <p>
         It is very important to mention that the chi-squared test is only valid
         when both of the following assumptions to be true.
@@ -163,7 +163,7 @@ export default function Page() {
           correct.
         </li>
       </ArticleBulletList>
-      <ArticleSectionTitle>Fair Die?</ArticleSectionTitle>
+      <H2>Fair Die?</H2>
       <p>
         If we were to roll a die 36 times, we would expect to see roughly 6
         occurrences of each of the 6 possible numbers. Therefore, we might see a

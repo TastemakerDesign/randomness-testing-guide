@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
-import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
+import { H2 } from "@/src/components/H2";
 import { TestInterface } from "@/src/components/TestInterface";
 import { aesGenerator } from "@/src/generators/aesGenerator";
 import { linearCongruentialGenerator } from "@/src/generators/linearCongruentialGenerator";
@@ -123,7 +123,7 @@ export default function Page() {
         ]}
         testFunctionNames={["autocorrelationTest8"]}
       />
-      <ArticleSectionTitle>Notes</ArticleSectionTitle>
+      <H2>Notes</H2>
       <p>
         The autocorrelation test, as implemented in this guide, is an
         overly-simplified version of the "serial test" from the NIST paper{" "}

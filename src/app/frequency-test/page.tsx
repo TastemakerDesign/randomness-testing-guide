@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
-import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
+import { H2 } from "@/src/components/H2";
 import { TestInterface } from "@/src/components/TestInterface";
 import { allZerosGenerator } from "@/src/generators/allZerosGenerator";
 import { allZerosThenAllOnesGenerator } from "@/src/generators/allZerosThenAllOnesGenerator";
@@ -89,7 +89,7 @@ export default function Page() {
         ]}
         testFunctionNames={["frequencyTest"]}
       />
-      <ArticleSectionTitle>Notes</ArticleSectionTitle>
+      <H2>Notes</H2>
       <p>
         A z test can be used instead of a chi-squared test for the frequency
         test and will give the same result. However, the chi-squared test is

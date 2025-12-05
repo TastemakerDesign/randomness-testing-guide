@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
-import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
+import { H2 } from "@/src/components/H2";
 import { ReferenceCard } from "@/src/components/ReferenceCard";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function Page() {
   return (
     <ArticleWrapper>
       <H1>Further Reading</H1>
-      <ArticleSectionTitle>Diehard Tests</ArticleSectionTitle>
+      <H2>Diehard Tests</H2>
       <p>
         George Marsaglia was the most prolific researcher of random number
         generators in the 1990s. He created the "diehard tests" which served as
@@ -51,7 +51,7 @@ export default function Page() {
         year="1995"
         url="https://tams.informatik.uni-hamburg.de/paper/2001/SA_Witt_Hartmann/cdrom/Internetseiten/stat.fsu.edu/diehard.html"
       />
-      <ArticleSectionTitle>The Art of Computer Programming</ArticleSectionTitle>
+      <H2>The Art of Computer Programming</H2>
       <p>
         Donald Knuth appears to have published some of the earliest work on
         random number generation testing, at least since computers were first
@@ -66,7 +66,7 @@ export default function Page() {
         year="1968"
         url="https://www.amazon.com/Art-Computer-Programming-Seminumerical-Algorithms/dp/0201896842"
       />
-      <ArticleSectionTitle>Normal Numbers</ArticleSectionTitle>
+      <H2>Normal Numbers</H2>
       <p>
         It would be interesting to show the results of randomness tests on
         mathematical constants like <InlineMath math="\pi" />,{" "}

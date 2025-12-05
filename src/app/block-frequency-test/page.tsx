@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
-import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
+import { H2 } from "@/src/components/H2";
 import { TestInterface } from "@/src/components/TestInterface";
 import { allZerosThenAllOnesGenerator } from "@/src/generators/allZerosThenAllOnesGenerator";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
@@ -67,7 +67,7 @@ export default function Page() {
         ]}
         testFunctionNames={["blockFrequencyTest10"]}
       />
-      <ArticleSectionTitle>Notes</ArticleSectionTitle>
+      <H2>Notes</H2>
       <p>
         The technique of dividing the input string into "blocks" and testing
         each block independently works for any test of randomness that uses the

@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { BlockMath, InlineMath } from "react-katex";
-import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
+import { H2 } from "@/src/components/H2";
 import { TestInterface } from "@/src/components/TestInterface";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
@@ -88,7 +88,7 @@ export default function Page() {
         ]}
         testFunctionNames={["runsTest4"]}
       />
-      <ArticleSectionTitle>Notes</ArticleSectionTitle>
+      <H2>Notes</H2>
       <p>
         Each statistical test for randomness works effectively for larger binary
         strings due to the central limit theorem becoming more applicable with
