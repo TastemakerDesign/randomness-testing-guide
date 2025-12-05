@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { BlockMath } from "react-katex";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { BM } from "@/src/components/BM";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
 import { IM } from "@/src/components/IM";
@@ -20,7 +20,7 @@ export default function Page() {
     <ArticleWrapper>
       <H1>Runs Test</H1>
       <p>Let's say we have the following binary string.</p>
-      <BlockMath math="s = 01010101010101010101" />
+      <BM math="s = 01010101010101010101" />
       <p>
         It is obviously not random since each bit is simply the opposite of the
         previous one. Therefore, we must check that there is a reasonable number
@@ -48,7 +48,7 @@ export default function Page() {
         is 20 / 2 = 10. Therefore, we can calculate the <IM math="\chi^{2}" />{" "}
         statistic with three degrees of freedom as follows.
       </p>
-      <BlockMath math="\chi^{2}_{3} = \underbrace{\frac{(20 - 5)^2}{5}}_{\text{runs of length 1}} + \underbrace{\frac{(0 - 2.5)^2}{2.5}}_{\text{runs of length 2}} + \underbrace{\frac{(0 - 1.25)^2}{1.25}}_{\text{runs of length 3}} + \underbrace{\frac{(0 - 1.25)^2}{1.25}}_{\text{runs of length ≥4}} = 50" />
+      <BM math="\chi^{2}_{3} = \underbrace{\frac{(20 - 5)^2}{5}}_{\text{runs of length 1}} + \underbrace{\frac{(0 - 2.5)^2}{2.5}}_{\text{runs of length 2}} + \underbrace{\frac{(0 - 1.25)^2}{1.25}}_{\text{runs of length 3}} + \underbrace{\frac{(0 - 1.25)^2}{1.25}}_{\text{runs of length ≥4}} = 50" />
       <p>
         The p-value for a chi-squared of 50 with 3 degrees of freedom is 0.0000,
         which is less than 0.01, indicating that this sequence of numbers was
@@ -77,7 +77,7 @@ export default function Page() {
         difficult to pass than the frequency test. However, it fails on the
         following binary string that was obviously not randomly generated.
       </p>
-      <BlockMath math="s = \color{lightcoral}{01010101}\color{lightgreen}{00110011}\color{lightblue}{000111}\color{lightcoral}{01010101}\color{lightgreen}{00110011}\color{lightblue}{000111}\color{orchid}{00001111}" />
+      <BM math="s = \color{lightcoral}{01010101}\color{lightgreen}{00110011}\color{lightblue}{000111}\color{lightcoral}{01010101}\color{lightgreen}{00110011}\color{lightblue}{000111}\color{orchid}{00001111}" />
       <TestInterface
         testCases={[
           {

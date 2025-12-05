@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { BlockMath } from "react-katex";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { BM } from "@/src/components/BM";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
 import { IM } from "@/src/components/IM";
@@ -19,7 +19,7 @@ export default function Page() {
     <ArticleWrapper>
       <H1>Word Frequency Test</H1>
       <p>Let's say we have the following binary string.</p>
-      <BlockMath math="s = \color{lightcoral}{01010101}\color{lightgreen}{00110011}\color{lightblue}{000111}\color{lightcoral}{01010101}\color{lightgreen}{00110011}\color{lightblue}{000111}\color{orchid}{00001111}" />
+      <BM math="s = \color{lightcoral}{01010101}\color{lightgreen}{00110011}\color{lightblue}{000111}\color{lightcoral}{01010101}\color{lightgreen}{00110011}\color{lightblue}{000111}\color{orchid}{00001111}" />
       <p>
         It is obviously not random because it is a concatenation of
         predetermined bit sequences. Therefore, we must check that the same
@@ -31,11 +31,11 @@ export default function Page() {
         11. If we assign A, B, C, and D to these words, respectively, then the
         sequence above transforms into the following sequence.
       </p>
-      <BlockMath math="s = \color{lightcoral}{BBBB}\color{lightgreen}{ADAD}\color{lightblue}{ABD}\color{lightcoral}{BBBB}\color{lightgreen}{ADAD}\color{lightblue}{ABD}\color{orchid}{AADD}" />
+      <BM math="s = \color{lightcoral}{BBBB}\color{lightgreen}{ADAD}\color{lightblue}{ABD}\color{lightcoral}{BBBB}\color{lightgreen}{ADAD}\color{lightblue}{ABD}\color{orchid}{AADD}" />
       <p>
         Now we can run a frequency test on this string with four categories.
       </p>
-      <BlockMath math="\chi^{2}_{3} = \frac{(8 - 6.5)^2}{6.5} + \frac{(10 - 6.5)^2}{6.5} + \frac{(0 - 6.5)^2}{6.5} + \frac{(8 - 6.5)^2}{6.5} \approx 9.0769" />
+      <BM math="\chi^{2}_{3} = \frac{(8 - 6.5)^2}{6.5} + \frac{(10 - 6.5)^2}{6.5} + \frac{(0 - 6.5)^2}{6.5} + \frac{(8 - 6.5)^2}{6.5} \approx 9.0769" />
       <p>
         The p-value for a chi-squared of 9.0769 with 3 degrees of freedom is
         0.0000, which is less than 0.01, indicating that this sequence of
@@ -72,7 +72,7 @@ export default function Page() {
         doing this is using a <b>linear congruential generator</b>, which is
         defined by the following formula.
       </p>
-      <BlockMath math="X_{n+1} = (aX_n + c) \bmod m" />
+      <BM math="X_{n+1} = (aX_n + c) \bmod m" />
       <p>
         In this formula, <IM math="X_n" /> is the current value in the sequence,{" "}
         <IM math="a" /> is the multiplier, <IM math="c" /> is the increment, and{" "}

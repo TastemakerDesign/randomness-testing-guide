@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { BlockMath } from "react-katex";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { BM } from "@/src/components/BM";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
 import { IM } from "@/src/components/IM";
@@ -19,15 +19,15 @@ export default function Page() {
     <ArticleWrapper>
       <H1>Block Frequency Test</H1>
       <p>Let's say we have the following binary string.</p>
-      <BlockMath math="s = 00000000001111111111" />
+      <BM math="s = 00000000001111111111" />
       <p>
         It is obviously not random since the zeros and ones are not mixed
         together. Therefore, we must check that there are roughly an equal
         number of zeros and ones in each part of the string. Let's break the
         string into two substrings.
       </p>
-      <BlockMath math="s_{0} = 0000000000" />
-      <BlockMath math="s_{1} = 1111111111" />
+      <BM math="s_{0} = 0000000000" />
+      <BM math="s_{1} = 1111111111" />
       <p>
         A useful property of <IM math="\chi^{2}" /> variables with{" "}
         <IM math="m" /> and <IM math="n" /> degrees of freedom is that their sum
@@ -38,7 +38,7 @@ export default function Page() {
         Therefore, in the example above, we get the following{" "}
         <IM math="\chi^{2}" /> value.
       </p>
-      <BlockMath math="\chi^{2}_{1+1} = \left(\frac{(0 - 5)^2}{5} + \frac{(10 - 5)^2}{5}\right) + \left(\frac{(10 - 5)^2}{5} + \frac{(0 - 5)^2}{5}\right) = 20" />
+      <BM math="\chi^{2}_{1+1} = \left(\frac{(0 - 5)^2}{5} + \frac{(10 - 5)^2}{5}\right) + \left(\frac{(10 - 5)^2}{5} + \frac{(0 - 5)^2}{5}\right) = 20" />
       <p>
         The p-value for a chi-squared of 20 with 2 degrees of freedom is 0.0000,
         which is less than 0.01, indicating that this sequence of numbers was
@@ -58,7 +58,7 @@ export default function Page() {
         better version of the basic frequency test. However, it fails on the
         following binary string that was obviously not randomly generated.
       </p>
-      <BlockMath math="s = 01010101010101010101" />
+      <BM math="s = 01010101010101010101" />
       <TestInterface
         testCases={[
           {

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { BlockMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { BM } from "@/src/components/BM";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
 import { IM } from "@/src/components/IM";
@@ -22,7 +22,7 @@ export default function Page() {
       <p>
         A linear congruential generator is defined by the following formula.
       </p>
-      <BlockMath math="X_{n+1} = (aX_n + c) \bmod m" />
+      <BM math="X_{n+1} = (aX_n + c) \bmod m" />
       <p>
         In this formula, <IM math="X_n" /> is the current value in the sequence,{" "}
         <IM math="a" /> is the multiplier, <IM math="c" /> is the increment, and{" "}
@@ -33,7 +33,7 @@ export default function Page() {
         Let's say we have the following binary string generated from a linear
         congruential generator.
       </p>
-      <BlockMath math="s = 00110111001011011011101101011101001010101011011010" />
+      <BM math="s = 00110111001011011011101101011101001010101011011010" />
       <p>
         The weakness we can exploit here is that each bit is a linear function
         of the previous bits. If we can successfully predict the next bit using
@@ -61,8 +61,8 @@ export default function Page() {
         frequency test uses <i>non-overlapping words</i>, whereas here we are
         looking at <i>overlapping words</i>.
       </p>
-      <BlockMath math="s = \text{\color{lightcoral}{0} \color{orange}{0} \color{yellow}{1} \color{lightgreen}{1} \color{lightblue}{0} \color{orchid}{1} \color{white}{1 \ldots}}" />
-      <BlockMath math="s' = \text{\color{lightcoral}{00} \color{orange}{01} \color{yellow}{11} \color{lightgreen}{10} \color{lightblue}{01} \color{orchid}{11}} \color{white}{\ldots}" />
+      <BM math="s = \text{\color{lightcoral}{0} \color{orange}{0} \color{yellow}{1} \color{lightgreen}{1} \color{lightblue}{0} \color{orchid}{1} \color{white}{1 \ldots}}" />
+      <BM math="s' = \text{\color{lightcoral}{00} \color{orange}{01} \color{yellow}{11} \color{lightgreen}{10} \color{lightblue}{01} \color{orchid}{11}} \color{white}{\ldots}" />
       <p>
         The advantage of using overlapping words is that the sample size becomes
         much larger. For words of length 2 (such as the above example), the

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { BlockMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { BM } from "@/src/components/BM";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
 import { IM } from "@/src/components/IM";
@@ -20,7 +20,7 @@ export default function Page() {
     <ArticleWrapper>
       <H1>Frequency Test</H1>
       <p>Let's say we have the following binary string.</p>
-      <BlockMath math="s = 00000000000000000000" />
+      <BM math="s = 00000000000000000000" />
       <p>
         It is obviously not random since there are no ones in the string.
         Therefore, we must check that there are roughly an equal number of zeros
@@ -60,7 +60,7 @@ export default function Page() {
         We can calculate the <IM math="\chi^{2}" /> with 1 degree of freedom as
         follows.
       </p>
-      <BlockMath math="\chi^{2}_{1} = \frac{(20 - 10)^2}{10} + \frac{(0 - 10)^2}{10} = 20" />
+      <BM math="\chi^{2}_{1} = \frac{(20 - 10)^2}{10} + \frac{(0 - 10)^2}{10} = 20" />
       <p>
         The p-value for a chi-squared of 20 with 1 degree of freedom is 0.0000,
         which is less than 0.01, indicating that this sequence of numbers was
@@ -80,7 +80,7 @@ export default function Page() {
         whether a number was randomly generated. However, it fails on the
         following binary string that was obviously not randomly generated.
       </p>
-      <BlockMath math="s = 00000000001111111111" />
+      <BM math="s = 00000000001111111111" />
       <TestInterface
         testCases={[
           {
