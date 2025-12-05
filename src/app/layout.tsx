@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Sidebar } from "@/src/components/Sidebar/Sidebar";
 import "katex/dist/katex.min.css";
-import { openSans } from "@/src/app/fonts";
+import { openSans } from "@/src/utils/fonts";
 import { MixpanelScript } from "@/src/utils/MixpanelScript";
 
 export const metadata: Metadata = {

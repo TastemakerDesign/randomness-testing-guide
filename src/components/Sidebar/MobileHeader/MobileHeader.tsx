@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { jetBrainsMono } from "@/src/app/fonts";
+import { jetBrainsMono } from "@/src/utils/fonts";
 
 export function MobileHeader({
   isOpen,

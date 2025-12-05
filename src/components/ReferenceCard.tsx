@@ -1,5 +1,5 @@
 import { HiExternalLink } from "react-icons/hi";
-import { ptSerif } from "@/src/app/fonts";
+import { ptSerif } from "@/src/utils/fonts";
 
 export function ReferenceCard({
   title,

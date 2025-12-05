@@ -1,4 +1,4 @@
-import { ptSerif } from "@/src/app/fonts";
+import { ptSerif } from "@/src/utils/fonts";
 
 export function ArticleSectionTitle({
   children,

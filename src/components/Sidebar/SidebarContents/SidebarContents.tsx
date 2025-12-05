@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { FaPatreon, FaYoutube } from "react-icons/fa";
 import { IoChevronDown } from "react-icons/io5";
-import { jetBrainsMono } from "@/src/app/fonts";
 import { navigationItems } from "@/src/components/Sidebar/navigationItems";
+import { jetBrainsMono } from "@/src/utils/fonts";
 
 export function SidebarContents({
   pathname,

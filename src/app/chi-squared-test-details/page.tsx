@@ -1,7 +1,7 @@
 import { BlockMath, InlineMath } from "react-katex";
+import { VerificationTable } from "@/src/app/chi-squared-test-details/VerificationTable";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
-import { VerificationTable } from "./VerificationTable";
 
 export default function Page() {
   return (
