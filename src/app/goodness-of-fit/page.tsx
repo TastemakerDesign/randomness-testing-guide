@@ -1,9 +1,16 @@
+import { Metadata } from "next";
 import { HiExternalLink } from "react-icons/hi";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+
+export const metadata: Metadata = {
+  title: "Goodness of Fit | Randomness Testing Guide",
+  description:
+    "Determine whether an observed distribution matches an expected distribution.",
+};
 
 export default function Page() {
   return (

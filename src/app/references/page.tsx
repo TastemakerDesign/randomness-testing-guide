@@ -1,6 +1,13 @@
+import { Metadata } from "next";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { ReferenceCard } from "@/src/components/ReferenceCard";
+
+export const metadata: Metadata = {
+  title: "References | Randomness Testing Guide",
+  description:
+    "All the papers and research I can find about testing random number generators.",
+};
 
 export default function Page() {
   return (

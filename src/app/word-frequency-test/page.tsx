@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
@@ -5,6 +6,12 @@ import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
 import { linearCongruentialGenerator } from "@/src/generators/linearCongruentialGenerator";
+
+export const metadata: Metadata = {
+  title: "Word Frequency Test | Randomness Testing Guide",
+  description:
+    "Test whether a sequence of bits is random based on the frequency of groups of 0s and 1s.",
+};
 
 export default function Page() {
   return (

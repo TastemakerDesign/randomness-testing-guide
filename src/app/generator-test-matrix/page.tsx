@@ -1,6 +1,13 @@
+import { Metadata } from "next";
 import { GeneratorTestMatrix } from "@/src/app/generator-test-matrix/GeneratorTestMatrix";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+
+export const metadata: Metadata = {
+  title: "Generator Test Matrix | Randomness Testing Guide",
+  description:
+    "Compare methods of generating random strings with methods of testing them.",
+};
 
 export default function Page() {
   const alpha = 0.01;

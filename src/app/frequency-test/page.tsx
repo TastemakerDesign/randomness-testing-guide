@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
@@ -6,6 +7,12 @@ import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { allZerosGenerator } from "@/src/generators/allZerosGenerator";
 import { allZerosThenAllOnesGenerator } from "@/src/generators/allZerosThenAllOnesGenerator";
+
+export const metadata: Metadata = {
+  title: "Frequency Test | Randomness Testing Guide",
+  description:
+    "Test whether a sequence of bits is random based on the overall frequency of 0s and 1s.",
+};
 
 export default function Page() {
   return (

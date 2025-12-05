@@ -1,9 +1,15 @@
+import { Metadata } from "next";
 import { InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { ReferenceCard } from "@/src/components/ReferenceCard";
+
+export const metadata: Metadata = {
+  title: "Further Reading | Randomness Testing Guide",
+  description: "Additional papers about randomness testing.",
+};
 
 export default function Page() {
   return (

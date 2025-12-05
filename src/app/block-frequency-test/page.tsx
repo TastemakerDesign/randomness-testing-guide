@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
@@ -5,6 +6,12 @@ import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { allZerosThenAllOnesGenerator } from "@/src/generators/allZerosThenAllOnesGenerator";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
+
+export const metadata: Metadata = {
+  title: "Block Frequency Test | Randomness Testing Guide",
+  description:
+    "Test whether a sequence of bits is random based on the frequency of 0s and 1s within blocks of bits.",
+};
 
 export default function Page() {
   return (

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
@@ -6,6 +7,12 @@ import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
+
+export const metadata: Metadata = {
+  title: "Runs Test | Randomness Testing Guide",
+  description:
+    "Test whether a sequence of bits is random based on the number of transitions between 0s and 1s.",
+};
 
 export default function Page() {
   return (

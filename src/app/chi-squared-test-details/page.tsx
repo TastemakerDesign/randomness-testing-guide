@@ -1,7 +1,14 @@
+import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
 import { VerificationTable } from "@/src/app/chi-squared-test-details/VerificationTable";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+
+export const metadata: Metadata = {
+  title: "Chi-Squared Test Details | Randomness Testing Guide",
+  description:
+    "Learn about how the chi-squared test works underneath the hood.",
+};
 
 export default function Page() {
   return (

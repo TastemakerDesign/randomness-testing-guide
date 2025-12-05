@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
@@ -6,6 +7,12 @@ import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { aesGenerator } from "@/src/generators/aesGenerator";
 import { linearCongruentialGenerator } from "@/src/generators/linearCongruentialGenerator";
+
+export const metadata: Metadata = {
+  title: "Autocorrelation Test | Randomness Testing Guide",
+  description:
+    "Test whether a sequence of bits is random based on the ease of predicting the next bit based on the previous bits.",
+};
 
 export default function Page() {
   return (

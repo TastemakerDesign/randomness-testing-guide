@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+
+export const metadata: Metadata = {
+  title: "Changelog | Randomness Testing Guide",
+  description: "All the corrections made to the guide based on feedback.",
+};
 
 export default function Page() {
   return (

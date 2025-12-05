@@ -1,9 +1,16 @@
+import { Metadata } from "next";
 import { InlineMath } from "react-katex";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
+
+export const metadata: Metadata = {
+  title: "Block Longest Run Test | Randomness Testing Guide",
+  description:
+    "Test whether a sequence of bits is random based on the distribution of longest runs within blocks of bits.",
+};
 
 export default function Page() {
   return (
