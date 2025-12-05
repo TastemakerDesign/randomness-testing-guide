@@ -1,0 +1,122 @@
+"use client";
+
+import { useMemo } from "react";
+import { aesGenerator } from "@/src/generators/aesGenerator";
+import { allZerosGenerator } from "@/src/generators/allZerosGenerator";
+import { allZerosThenAllOnesGenerator } from "@/src/generators/allZerosThenAllOnesGenerator";
+import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
+import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
+import { linearCongruentialGenerator } from "@/src/generators/linearCongruentialGenerator";
+import { autocorrelationTest } from "@/src/tests/autocorrelationTest";
+import { blockFrequencyTest } from "@/src/tests/blockFrequencyTest";
+import { frequencyTest } from "@/src/tests/frequencyTest";
+import { runsTest } from "@/src/tests/runsTest";
+import { wordFrequencyTest } from "@/src/tests/wordFrequencyTest";
+
+export function GeneratorTestMatrix({ alpha }: { alpha: number }) {
+  const testResults = useMemo(() => {
+    const results = new Map<
+      string,
+      { pValue: number; passed: boolean; bits: string }
+    >();
+    for (const generator of generators) {
+      for (const test of tests) {
+        const key = `${generator.name}-${test.name}`;
+        const { pValue, passed, bits } = runTest(generator, test, alpha);
+        results.set(key, { pValue, passed, bits });
+      }
+    }
+    return results;
+  }, [alpha]);
+
+  return (
+    <div className="overflow-x-auto">
+      <table className="min-w-full border-collapse border border-neutral-300">
+        <thead>
+          <tr className="bg-neutral-900">
+            <th className="border border-neutral-300 px-4 py-2 text-left font-semibold"></th>
+            {tests.map((test) => (
+              <th
+                key={test.name}
+                className="border border-neutral-300 px-4 py-2 text-center font-semibold"
+              >
+                {test.name}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {generators.map((generator) => (
+            <tr key={generator.name}>
+              <td className="border border-neutral-300 px-4 py-2 font-medium">
+                {generator.name}
+              </td>
+              {tests.map((test) => {
+                const key = `${generator.name}-${test.name}`;
+                const result = testResults.get(key);
+                if (!result) {
+                  return null;
+                }
+                const { pValue, passed, bits } = result;
+                return (
+                  <td
+                    key={test.name}
+                    className={`border border-neutral-300 px-4 py-2 text-center ${
+                      passed
+                        ? "bg-green-100 text-green-800"
+                        : "bg-red-100 text-red-800"
+                    }`}
+                  >
+                    <div className="font-semibold">
+                      {passed ? "PASS" : "FAIL"}
+                    </div>
+                    <div className="text-sm">p={pValue.toFixed(4)}</div>
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+const generators = [
+  allZerosGenerator,
+  allZerosThenAllOnesGenerator,
+  alternatingZerosAndOnesGenerator,
+  expectedRunsDistributionGenerator,
+  linearCongruentialGenerator,
+  aesGenerator,
+];
+
+const tests = [
+  { name: "Frequency Test", fn: frequencyTest },
+  { name: "Block Frequency Test", fn: blockFrequencyTest(100) },
+  { name: "Runs Test", fn: runsTest(10) },
+  { name: "Word Frequency Test", fn: wordFrequencyTest(2) },
+  { name: "Autocorrelation Test", fn: autocorrelationTest(8) },
+];
+
+function runTest(
+  generator: (typeof generators)[0],
+  test: (typeof tests)[0],
+  alpha: number,
+) {
+  let nbits = 0;
+  if (test.name === "Block Frequency Test") {
+    nbits = 10000;
+  } else if (generator.name === "Linear Congruential Generator") {
+    nbits = 700000;
+  } else if (generator.name === "AES Generator") {
+    nbits = 700000;
+  } else {
+    nbits = 10000;
+  }
+  const bits = generator.generate(nbits);
+  const result = test.fn(bits);
+  const pValue = parseFloat(result.pValue);
+  const passed = pValue >= alpha;
+  return { pValue, passed, bits };
+}
