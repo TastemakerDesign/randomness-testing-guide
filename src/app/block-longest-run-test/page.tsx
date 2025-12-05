@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { InlineMath } from "react-katex";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
+import { IM } from "@/src/components/IM";
 import { TestInterface } from "@/src/components/TestInterface";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
@@ -30,19 +30,18 @@ export default function Page() {
       <p>
         This overall idea of the test makes sense, but the way they implemented
         it involves arbitrary thresholds and magic numbers. For example, if{" "}
-        <InlineMath math="n" /> is the length of the bit string and{" "}
-        <InlineMath math="M" /> is the block size, then the following table
-        specifies the proper way of sizing <InlineMath math="M" /> as a function
-        of <InlineMath math="n" />.
+        <IM math="n" /> is the length of the bit string and <IM math="M" /> is
+        the block size, then the following table specifies the proper way of
+        sizing <IM math="M" /> as a function of <IM math="n" />.
       </p>
       <table className="border-collapse border border-neutral-300 mx-auto">
         <thead>
           <tr>
             <th className="border border-neutral-300 px-4 py-2">
-              Minimum <InlineMath math="n" />
+              Minimum <IM math="n" />
             </th>
             <th className="border border-neutral-300 px-4 py-2">
-              <InlineMath math="M" />
+              <IM math="M" />
             </th>
           </tr>
         </thead>
@@ -68,15 +67,14 @@ export default function Page() {
               750,000
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="10^4" />
+              <IM math="10^4" />
             </td>
           </tr>
         </tbody>
       </table>
       <p>
         Where did the magic numbers 128, 6272, and 750,000 come from? What
-        happens if <InlineMath math="n" /> is a much larger number, like
-        10,000,000?
+        happens if <IM math="n" /> is a much larger number, like 10,000,000?
       </p>
       <p>
         The more serious problems arise when considering the table of expected
@@ -86,37 +84,37 @@ export default function Page() {
         <thead>
           <tr>
             <th className="border border-neutral-300 px-4 py-2">
-              <InlineMath math="v_i" />
+              <IM math="v_i" />
             </th>
             <th className="border border-neutral-300 px-4 py-2">
-              <InlineMath math="M = 8" />
+              <IM math="M = 8" />
             </th>
             <th className="border border-neutral-300 px-4 py-2">
-              <InlineMath math="M = 128" />
+              <IM math="M = 128" />
             </th>
             <th className="border border-neutral-300 px-4 py-2">
-              <InlineMath math="M = 10^4" />
+              <IM math="M = 10^4" />
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="v_0" />
+              <IM math="v_0" />
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="\leq 1" />
+              <IM math="\leq 1" />
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="\leq 4" />
+              <IM math="\leq 4" />
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="\leq 10" />
+              <IM math="\leq 10" />
             </td>
           </tr>
           <tr>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="v_1" />
+              <IM math="v_1" />
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
               2
@@ -130,7 +128,7 @@ export default function Page() {
           </tr>
           <tr>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="v_2" />
+              <IM math="v_2" />
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
               3
@@ -144,10 +142,10 @@ export default function Page() {
           </tr>
           <tr>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="v_3" />
+              <IM math="v_3" />
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="\geq 4" />
+              <IM math="\geq 4" />
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
               7
@@ -158,7 +156,7 @@ export default function Page() {
           </tr>
           <tr>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="v_4" />
+              <IM math="v_4" />
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center"></td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
@@ -170,11 +168,11 @@ export default function Page() {
           </tr>
           <tr>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="v_5" />
+              <IM math="v_5" />
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center"></td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="\geq 9" />
+              <IM math="\geq 9" />
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
               15
@@ -182,22 +180,22 @@ export default function Page() {
           </tr>
           <tr>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="v_6" />
+              <IM math="v_6" />
             </td>
             <td className="border border-neutral-300 px-4 py-2 text-center"></td>
             <td className="border border-neutral-300 px-4 py-2 text-center"></td>
             <td className="border border-neutral-300 px-4 py-2 text-center">
-              <InlineMath math="\geq 16" />
+              <IM math="\geq 16" />
             </td>
           </tr>
         </tbody>
       </table>
       <p>
         Why is the number of categories different depending on the value of{" "}
-        <InlineMath math="M" />? Thankfully, the authors specify what the
-        probabilities are in a later section, but they don't provide the formula
-        for how the numbers were obtained, instead citing a 397-page
-        non-free-access book without saying which page the formula came from.
+        <IM math="M" />? Thankfully, the authors specify what the probabilities
+        are in a later section, but they don't provide the formula for how the
+        numbers were obtained, instead citing a 397-page non-free-access book
+        without saying which page the formula came from.
       </p>
       <p>
         The benefit of using the "runs test" described on this website is that

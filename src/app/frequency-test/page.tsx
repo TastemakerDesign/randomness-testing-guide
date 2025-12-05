@@ -1,9 +1,10 @@
 import { Metadata } from "next";
-import { BlockMath, InlineMath } from "react-katex";
+import { BlockMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
+import { IM } from "@/src/components/IM";
 import { TestInterface } from "@/src/components/TestInterface";
 import { allZerosGenerator } from "@/src/generators/allZerosGenerator";
 import { allZerosThenAllOnesGenerator } from "@/src/generators/allZerosThenAllOnesGenerator";
@@ -26,38 +27,38 @@ export default function Page() {
         and ones in the string.
       </p>
       <p>
-        For a binary string of length <InlineMath math="n" />, we would expect
-        the number of 1s in the string to be <InlineMath math="n/2" />.
+        For a binary string of length <IM math="n" />, we would expect the
+        number of 1s in the string to be <IM math="n/2" />.
       </p>
       <ArticleBulletList>
         <li>
-          <InlineMath math="O_{0} = 20" />
+          <IM math="O_{0} = 20" />
           <span className="ml-4 text-neutral-400">
             (we observed 20 zeros out of 20 bits)
           </span>
         </li>
         <li>
-          <InlineMath math="E_{0} = 10" />
+          <IM math="E_{0} = 10" />
           <span className="ml-4 text-neutral-400">
             (we expected 10 zeros out of 20 bits)
           </span>
         </li>
         <li>
-          <InlineMath math="O_{1} = 0" />
+          <IM math="O_{1} = 0" />
           <span className="ml-4 text-neutral-400">
             (we observed 0 ones out of 20 bits)
           </span>
         </li>
         <li>
-          <InlineMath math="E_{1} = 10" />
+          <IM math="E_{1} = 10" />
           <span className="ml-4 text-neutral-400">
             (we expected 10 ones out of 20 bits)
           </span>
         </li>
       </ArticleBulletList>
       <p>
-        We can calculate the <InlineMath math="\chi^{2}" /> with 1 degree of
-        freedom as follows.
+        We can calculate the <IM math="\chi^{2}" /> with 1 degree of freedom as
+        follows.
       </p>
       <BlockMath math="\chi^{2}_{1} = \frac{(20 - 10)^2}{10} + \frac{(0 - 10)^2}{10} = 20" />
       <p>

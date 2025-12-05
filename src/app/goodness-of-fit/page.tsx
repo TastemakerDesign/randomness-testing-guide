@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import { HiExternalLink } from "react-icons/hi";
-import { BlockMath, InlineMath } from "react-katex";
+import { BlockMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
+import { IM } from "@/src/components/IM";
 
 export const metadata: Metadata = {
   title: "Goodness of Fit | Randomness Testing Guide",
@@ -19,9 +20,8 @@ export default function Page() {
       <H2>Fair Coin?</H2>
       <p>
         If we were to flip a coin 10 times, we would expect to see roughly 5
-        heads and 5 tails. Let's assign <InlineMath math="0" /> to heads and{" "}
-        <InlineMath math="1" /> to tails. Therefore, we might see a sequence
-        like this.
+        heads and 5 tails. Let's assign <IM math="0" /> to heads and{" "}
+        <IM math="1" /> to tails. Therefore, we might see a sequence like this.
       </p>
       <BlockMath math="\text{Sequence} = 0110110100" />
       <p>But what if we saw a sequence of 10 heads and 0 tails?</p>
@@ -60,20 +60,19 @@ export default function Page() {
       <p>
         To determine whether an observed distribution of values matches an
         expected distribution of values, we can use a chi-squared test,
-        sometimes written out with the greek letter as{" "}
-        <InlineMath math="\chi^{2}" />. The formula for the{" "}
-        <InlineMath math="\chi^{2}" /> statistic is as follows.
+        sometimes written out with the greek letter as <IM math="\chi^{2}" />.
+        The formula for the <IM math="\chi^{2}" /> statistic is as follows.
       </p>
       <BlockMath math="\chi^{2} = \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}}" />
       <p>In this formula,</p>
       <ArticleBulletList>
         <li>
-          <InlineMath math="O_{i}" /> is the observed probability of class{" "}
-          <InlineMath math="i" /> appearing.
+          <IM math="O_{i}" /> is the observed probability of class{" "}
+          <IM math="i" /> appearing.
         </li>
         <li>
-          <InlineMath math="E_{i}" /> is the expected probability of class{" "}
-          <InlineMath math="i" /> appearing.
+          <IM math="E_{i}" /> is the expected probability of class{" "}
+          <IM math="i" /> appearing.
         </li>
       </ArticleBulletList>
       <p>
@@ -82,25 +81,25 @@ export default function Page() {
       </p>
       <ArticleBulletList>
         <li>
-          <InlineMath math="O_{0} = 1" />
+          <IM math="O_{0} = 1" />
           <span className="ml-4 text-neutral-400">
             (we observed 1 heads out of 10)
           </span>
         </li>
         <li>
-          <InlineMath math="E_{0} = 5" />
+          <IM math="E_{0} = 5" />
           <span className="ml-4 text-neutral-400">
             (we expected 5 heads out of 10)
           </span>
         </li>
         <li>
-          <InlineMath math="O_{1} = 9" />
+          <IM math="O_{1} = 9" />
           <span className="ml-4 text-neutral-400">
             (we observed 9 tails out of 10)
           </span>
         </li>
         <li>
-          <InlineMath math="E_{1} = 5" />
+          <IM math="E_{1} = 5" />
           <span className="ml-4 text-neutral-400">
             (we expected 5 tails out of 10)
           </span>
@@ -108,7 +107,7 @@ export default function Page() {
       </ArticleBulletList>
       <p>
         Plugging these numbers into the formula, we get the following value for{" "}
-        <InlineMath math="\chi^{2}" />.
+        <IM math="\chi^{2}" />.
       </p>
       <BlockMath math="\chi^{2} = \frac{(1 - 5)^2}{5} + \frac{(9 - 5)^2}{5} = 6.4" />
       <p>
@@ -116,14 +115,13 @@ export default function Page() {
         for our data. This is the number of classes minus 1. Since we have 2
         classes (heads and tails), our degrees of freedom is equal to 1. The
         chi-squared variable is often written with the associated degrees of
-        freedom as a subscript, like <InlineMath math="\chi^{2}_{1}" />.
+        freedom as a subscript, like <IM math="\chi^{2}_{1}" />.
       </p>
       <p>
-        Now what do we do with our <InlineMath math="\chi^{2}" /> value? There
-        is a magic formula that let's us calculate the probability that the
-        observed distribution of values is equally or more different than the
-        expected distribution of values. (You can read more about this "magic"
-        formula at{" "}
+        Now what do we do with our <IM math="\chi^{2}" /> value? There is a
+        magic formula that let's us calculate the probability that the observed
+        distribution of values is equally or more different than the expected
+        distribution of values. (You can read more about this "magic" formula at{" "}
         <a
           href="https://matthewfeickert.github.io/Statistics-Notes/notebooks/Introductory/Chi-Squared-Distribution.html"
           target="_blank"
@@ -136,8 +134,8 @@ export default function Page() {
         .)
       </p>
       <p>
-        With <InlineMath math="\chi^{2} = 6.4" /> and the degrees of freedom
-        equal to 1, we can calculate the probability:
+        With <IM math="\chi^{2} = 6.4" /> and the degrees of freedom equal to 1,
+        we can calculate the probability:
       </p>
       <BlockMath math="\text{Probability} = 1 - \frac{\gamma\left(\frac{1}{2}, \frac{6.4}{2}\right)}{\Gamma\left(\frac{1}{2}\right)} \approx 1.1\%" />
       <p>
@@ -176,43 +174,42 @@ export default function Page() {
       </p>
       <ArticleBulletList>
         <li>
-          <InlineMath math="O_{1} = 4" />
+          <IM math="O_{1} = 4" />
           <span className="ml-4 text-neutral-400">(we observed 4 ones)</span>
         </li>
         <li>
-          <InlineMath math="O_{2} = 7" />
+          <IM math="O_{2} = 7" />
           <span className="ml-4 text-neutral-400">(we observed 7 twos)</span>
         </li>
         <li>
-          <InlineMath math="O_{3} = 7" />
+          <IM math="O_{3} = 7" />
           <span className="ml-4 text-neutral-400">(we observed 7 threes)</span>
         </li>
         <li>
-          <InlineMath math="O_{4} = 6" />
+          <IM math="O_{4} = 6" />
           <span className="ml-4 text-neutral-400">(we observed 6 fours)</span>
         </li>
         <li>
-          <InlineMath math="O_{5} = 6" />
+          <IM math="O_{5} = 6" />
           <span className="ml-4 text-neutral-400">(we observed 6 fives)</span>
         </li>
         <li>
-          <InlineMath math="O_{6} = 6" />
+          <IM math="O_{6} = 6" />
           <span className="ml-4 text-neutral-400">(we observed 6 sixes)</span>
         </li>
         <li>
-          <InlineMath math="E_{1} = E_{2} = E_{3} = E_{4} = E_{5} = E_{6} = 6" />
+          <IM math="E_{1} = E_{2} = E_{3} = E_{4} = E_{5} = E_{6} = 6" />
         </li>
       </ArticleBulletList>
       <p>
-        Now we can calculate the <InlineMath math="\chi^{2}" /> statistic for
-        this data.
+        Now we can calculate the <IM math="\chi^{2}" /> statistic for this data.
       </p>
       <BlockMath math="\chi^{2} = \frac{(4 - 6)^2}{6} + \frac{(7 - 6)^2}{6} + \frac{(7 - 6)^2}{6} + \frac{(6 - 6)^2}{6} + \frac{(6 - 6)^2}{6} + \frac{(6 - 6)^2}{6} = 1" />
       <p>
         For this test, we have 6 classes (the numbers 1 through 6), so our
-        degrees of freedom is <InlineMath math="6 - 1 = 5" />. We can now use
-        the chi-squared distribution with <InlineMath math="\chi^{2}_{5} = 1" />{" "}
-        to calculate the following probability.
+        degrees of freedom is <IM math="6 - 1 = 5" />. We can now use the
+        chi-squared distribution with <IM math="\chi^{2}_{5} = 1" /> to
+        calculate the following probability.
       </p>
       <BlockMath math="\text{Probability} = 1 - \frac{\gamma\left(\frac{5}{2}, \frac{1}{2}\right)}{\Gamma\left(\frac{5}{2}\right)} \approx 96.3\%" />
       <p>

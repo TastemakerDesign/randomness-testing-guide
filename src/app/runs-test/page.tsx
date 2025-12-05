@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { BlockMath, InlineMath } from "react-katex";
+import { BlockMath } from "react-katex";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
+import { IM } from "@/src/components/IM";
 import { TestInterface } from "@/src/components/TestInterface";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
@@ -32,22 +33,20 @@ export default function Page() {
         transition in 2 steps, a 12.5% chance we transition in 3 steps, etc.
       </p>
       <p>
-        This means that for a string of length <InlineMath math="n" />, 50% of
-        the total number of runs will have length 1, 25% of the total number of
-        runs will have length 2, 12.5% of the total number of runs will have
-        length 3, etc. These percentages tell us that the expected average run
-        length is 2. We can use a <InlineMath math="\chi^{2}" /> test to
-        determine if the observed distribution of run lengths matches this
-        expected distribution.
+        This means that for a string of length <IM math="n" />, 50% of the total
+        number of runs will have length 1, 25% of the total number of runs will
+        have length 2, 12.5% of the total number of runs will have length 3,
+        etc. These percentages tell us that the expected average run length is
+        2. We can use a <IM math="\chi^{2}" /> test to determine if the observed
+        distribution of run lengths matches this expected distribution.
       </p>
       <p>
-        For the binary string <InlineMath math="s" /> above, every single bit is
+        For the binary string <IM math="s" /> above, every single bit is
         different from the previous one, so there are 20 total runs in the
         string, each of length 1. The expected total number of runs is the
         length of the string divided by the expected average run length, which
-        is 20 / 2 = 10. Therefore, we can calculate the{" "}
-        <InlineMath math="\chi^{2}" /> statistic with three degrees of freedom
-        as follows.
+        is 20 / 2 = 10. Therefore, we can calculate the <IM math="\chi^{2}" />{" "}
+        statistic with three degrees of freedom as follows.
       </p>
       <BlockMath math="\chi^{2}_{3} = \underbrace{\frac{(20 - 5)^2}{5}}_{\text{runs of length 1}} + \underbrace{\frac{(0 - 2.5)^2}{2.5}}_{\text{runs of length 2}} + \underbrace{\frac{(0 - 1.25)^2}{1.25}}_{\text{runs of length 3}} + \underbrace{\frac{(0 - 1.25)^2}{1.25}}_{\text{runs of length ≥4}} = 50" />
       <p>

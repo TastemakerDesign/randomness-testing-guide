@@ -1,8 +1,9 @@
 import { Metadata } from "next";
-import { BlockMath, InlineMath } from "react-katex";
+import { BlockMath } from "react-katex";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
+import { IM } from "@/src/components/IM";
 import { TestInterface } from "@/src/components/TestInterface";
 import { allZerosThenAllOnesGenerator } from "@/src/generators/allZerosThenAllOnesGenerator";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
@@ -28,14 +29,14 @@ export default function Page() {
       <BlockMath math="s_{0} = 0000000000" />
       <BlockMath math="s_{1} = 1111111111" />
       <p>
-        A useful property of <InlineMath math="\chi^{2}" /> variables with{" "}
-        <InlineMath math="m" /> and <InlineMath math="n" /> degrees of freedom
-        is that their sum is also a <InlineMath math="\chi^{2}" /> variable with{" "}
-        <InlineMath math="m+n" /> degrees of freedom.
+        A useful property of <IM math="\chi^{2}" /> variables with{" "}
+        <IM math="m" /> and <IM math="n" /> degrees of freedom is that their sum
+        is also a <IM math="\chi^{2}" /> variable with <IM math="m+n" /> degrees
+        of freedom.
       </p>
       <p>
         Therefore, in the example above, we get the following{" "}
-        <InlineMath math="\chi^{2}" /> value.
+        <IM math="\chi^{2}" /> value.
       </p>
       <BlockMath math="\chi^{2}_{1+1} = \left(\frac{(0 - 5)^2}{5} + \frac{(10 - 5)^2}{5}\right) + \left(\frac{(10 - 5)^2}{5} + \frac{(0 - 5)^2}{5}\right) = 20" />
       <p>

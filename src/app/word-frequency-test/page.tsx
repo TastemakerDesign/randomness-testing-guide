@@ -1,8 +1,9 @@
 import { Metadata } from "next";
-import { BlockMath, InlineMath } from "react-katex";
+import { BlockMath } from "react-katex";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
+import { IM } from "@/src/components/IM";
 import { TestInterface } from "@/src/components/TestInterface";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
 import { linearCongruentialGenerator } from "@/src/generators/linearCongruentialGenerator";
@@ -73,12 +74,11 @@ export default function Page() {
       </p>
       <BlockMath math="X_{n+1} = (aX_n + c) \bmod m" />
       <p>
-        In this formula, <InlineMath math="X_n" /> is the current value in the
-        sequence, <InlineMath math="a" /> is the multiplier,{" "}
-        <InlineMath math="c" /> is the increment, and <InlineMath math="m" /> is
-        the modulus. <InlineMath math="X_0" /> is a seed that can be arbitrarily
-        chosen. The word frequency test fails to detect output from a linear
-        congruential generator.
+        In this formula, <IM math="X_n" /> is the current value in the sequence,{" "}
+        <IM math="a" /> is the multiplier, <IM math="c" /> is the increment, and{" "}
+        <IM math="m" /> is the modulus. <IM math="X_0" /> is a seed that can be
+        arbitrarily chosen. The word frequency test fails to detect output from
+        a linear congruential generator.
       </p>
       <TestInterface
         testCases={[

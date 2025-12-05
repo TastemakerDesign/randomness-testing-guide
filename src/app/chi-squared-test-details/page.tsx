@@ -1,8 +1,9 @@
 import { Metadata } from "next";
-import { BlockMath, InlineMath } from "react-katex";
+import { BlockMath } from "react-katex";
 import { VerificationTable } from "@/src/app/chi-squared-test-details/VerificationTable";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
+import { IM } from "@/src/components/IM";
 
 export const metadata: Metadata = {
   title: "Chi-Squared Test Details | Randomness Testing Guide",
@@ -34,14 +35,14 @@ export default function Page() {
       <p>For the coin flipping case, we get the following value.</p>
       <BlockMath math="\chi^{2} = \frac{(40 - 50)^2}{50} + \frac{(60 - 50)^2}{50} = 4" />
       <p>
-        Notice how in this case, <InlineMath math="\chi^2 = z^2" />. When the{" "}
-        <InlineMath math="\chi^2" /> statistic has one degree of freedom, it is
-        equivalent to the square of the <InlineMath math="z" /> statistic.
+        Notice how in this case, <IM math="\chi^2 = z^2" />. When the{" "}
+        <IM math="\chi^2" /> statistic has one degree of freedom, it is
+        equivalent to the square of the <IM math="z" /> statistic.
       </p>
       <p>
         Let's verify this relationship with several examples. The table below
-        shows various coin flip scenarios and compares <InlineMath math="z^2" />{" "}
-        with <InlineMath math="\chi^2" />:
+        shows various coin flip scenarios and compares <IM math="z^2" /> with{" "}
+        <IM math="\chi^2" />:
       </p>
       <VerificationTable />
     </ArticleWrapper>

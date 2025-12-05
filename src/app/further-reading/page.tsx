@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import { InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
+import { IM } from "@/src/components/IM";
 import { ReferenceCard } from "@/src/components/ReferenceCard";
 
 export const metadata: Metadata = {
@@ -69,10 +69,9 @@ export default function Page() {
       <H2>Normal Numbers</H2>
       <p>
         It would be interesting to show the results of randomness tests on
-        mathematical constants like <InlineMath math="\pi" />,{" "}
-        <InlineMath math="e" />, and <InlineMath math="\sqrt{2}" />. There is no
-        theoretical proof that their digits behave randomly, but it would be fun
-        to confirm this experimentally.
+        mathematical constants like <IM math="\pi" />, <IM math="e" />, and{" "}
+        <IM math="\sqrt{2}" />. There is no theoretical proof that their digits
+        behave randomly, but it would be fun to confirm this experimentally.
       </p>
       <ReferenceCard
         title="Normal number"
