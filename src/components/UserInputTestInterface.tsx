@@ -2,12 +2,17 @@
 
 import { useState } from "react";
 import { TestResultDisplay } from "@/src/components/TestResultDisplay";
+import { autocorrelationTest } from "@/src/tests/autocorrelationTest";
+import { blockFrequencyTest } from "@/src/tests/blockFrequencyTest";
+import { frequencyTest } from "@/src/tests/frequencyTest";
+import { runsTest } from "@/src/tests/runsTest";
+import { wordFrequencyTest } from "@/src/tests/wordFrequencyTest";
 import { TestResult } from "@/src/utils/TestResult";
 
 export function UserInputTestInterface({
-  testFunctions,
+  testFunctionNames,
 }: {
-  testFunctions: any[];
+  testFunctionNames: (keyof typeof testFunctions)[];
 }) {
   const [inputValue, setInputValue] = useState("");
   const [results, setResults] = useState<TestResult[] | null>(null);
@@ -28,7 +33,8 @@ export function UserInputTestInterface({
       return;
     }
     const testResults: TestResult[] = [];
-    for (const testFunction of testFunctions) {
+    for (const testFunctionName of testFunctionNames) {
+      const testFunction = testFunctions[testFunctionName];
       testResults.push(testFunction(inputValue));
     }
     setResults(testResults);
@@ -79,3 +85,11 @@ export function UserInputTestInterface({
     </div>
   );
 }
+
+const testFunctions = {
+  frequencyTest: frequencyTest,
+  blockFrequencyTest10: blockFrequencyTest(10),
+  runsTest4: runsTest(4),
+  wordFrequencyTest4: wordFrequencyTest(4),
+  autocorrelationTest4: autocorrelationTest(4),
+};

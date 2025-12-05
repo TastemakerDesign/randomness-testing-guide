@@ -1,14 +1,7 @@
-"use client";
-
 import { HiExternalLink } from "react-icons/hi";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { UserInputTestInterface } from "@/src/components/UserInputTestInterface";
-import { autocorrelationTest } from "@/src/tests/autocorrelationTest";
-import { blockFrequencyTest } from "@/src/tests/blockFrequencyTest";
-import { frequencyTest } from "@/src/tests/frequencyTest";
-import { runsTest } from "@/src/tests/runsTest";
-import { wordFrequencyTest } from "@/src/tests/wordFrequencyTest";
 
 export default function Page() {
   return (
@@ -20,12 +13,12 @@ export default function Page() {
         explainability. Try it out below!
       </p>
       <UserInputTestInterface
-        testFunctions={[
-          frequencyTest,
-          blockFrequencyTest(10),
-          runsTest(4),
-          wordFrequencyTest(4),
-          autocorrelationTest(4),
+        testFunctionNames={[
+          "frequencyTest",
+          "blockFrequencyTest10",
+          "runsTest4",
+          "wordFrequencyTest4",
+          "autocorrelationTest4",
         ]}
       />
       <p>
