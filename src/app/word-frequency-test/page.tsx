@@ -1,5 +1,3 @@
-"use client";
-
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
@@ -7,7 +5,6 @@ import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
 import { linearCongruentialGenerator } from "@/src/generators/linearCongruentialGenerator";
-import { wordFrequencyTest } from "@/src/tests/wordFrequencyTest";
 
 export default function Page() {
   return (
@@ -43,7 +40,7 @@ export default function Page() {
             sequence: "0101010100110011000111010101010011001100011100001111",
           },
         ]}
-        testFunctions={[wordFrequencyTest(2)]}
+        testFunctionNames={["wordFrequencyTest2"]}
       />
       <p>
         This sequence isn't quite long enough to see that it's not random, but a
@@ -57,7 +54,7 @@ export default function Page() {
               "01010101001100110001110101010100110011000111000011110101010100110011000111010101010011001100011100001111",
           },
         ]}
-        testFunctions={[wordFrequencyTest(2)]}
+        testFunctionNames={["wordFrequencyTest2"]}
       />
       <p>
         This test, known as the <b>word frequency test</b>, is a significantly
@@ -83,7 +80,7 @@ export default function Page() {
             sequence: linearCongruentialGenerator.generate(100),
           },
         ]}
-        testFunctions={[wordFrequencyTest(2)]}
+        testFunctionNames={["wordFrequencyTest2"]}
       />
       <ArticleSectionTitle>Notes</ArticleSectionTitle>
       <p>
@@ -99,7 +96,7 @@ export default function Page() {
               "01010101001100110001110101010100110011000111000011110101010100110011000111010101010011001100011100001111",
           },
         ]}
-        testFunctions={[wordFrequencyTest(2)]}
+        testFunctionNames={["wordFrequencyTest2"]}
       />
       <TestInterface
         testCases={[
@@ -109,7 +106,7 @@ export default function Page() {
               "01010101001100110001110101010100110011000111000011110101010100110011000111010101010011001100011100001111",
           },
         ]}
-        testFunctions={[wordFrequencyTest(3)]}
+        testFunctionNames={["wordFrequencyTest3"]}
       />
       <TestInterface
         testCases={[
@@ -119,7 +116,7 @@ export default function Page() {
               "01010101001100110001110101010100110011000111000011110101010100110011000111010101010011001100011100001111",
           },
         ]}
-        testFunctions={[wordFrequencyTest(4)]}
+        testFunctionNames={["wordFrequencyTest4"]}
       />
     </ArticleWrapper>
   );

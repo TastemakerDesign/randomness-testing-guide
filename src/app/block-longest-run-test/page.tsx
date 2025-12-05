@@ -1,13 +1,9 @@
-"use client";
-
 import { InlineMath } from "react-katex";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
-import { blockLongestRunTest } from "@/src/tests/blockLongestRunTest";
-import { runsTest } from "@/src/tests/runsTest";
 
 export default function Page() {
   return (
@@ -213,7 +209,7 @@ export default function Page() {
             sequence: alternatingZerosAndOnesGenerator.generate(100),
           },
         ]}
-        testFunctions={[blockLongestRunTest, runsTest(4)]}
+        testFunctionNames={["blockLongestRunTest", "runsTest4"]}
       />
       <p>Both tests fail to catch the expected runs test case.</p>
       <TestInterface
@@ -223,7 +219,7 @@ export default function Page() {
             sequence: expectedRunsDistributionGenerator.generate(100),
           },
         ]}
-        testFunctions={[blockLongestRunTest, runsTest(4)]}
+        testFunctionNames={["blockLongestRunTest", "runsTest4"]}
       />
     </ArticleWrapper>
   );

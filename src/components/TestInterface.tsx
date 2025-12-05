@@ -2,14 +2,20 @@
 
 import { useState } from "react";
 import { TestCaseAccordion } from "@/src/components/TestCaseAccordion";
+import { autocorrelationTest } from "@/src/tests/autocorrelationTest";
+import { blockFrequencyTest } from "@/src/tests/blockFrequencyTest";
+import { blockLongestRunTest } from "@/src/tests/blockLongestRunTest";
+import { frequencyTest } from "@/src/tests/frequencyTest";
+import { runsTest } from "@/src/tests/runsTest";
+import { wordFrequencyTest } from "@/src/tests/wordFrequencyTest";
 import { TestResult } from "@/src/utils/TestResult";
 
 export function TestInterface({
   testCases,
-  testFunctions,
+  testFunctionNames,
 }: {
   testCases: TestCase[];
-  testFunctions: any[];
+  testFunctionNames: (keyof typeof testFunctions)[];
 }) {
   const [results, setResults] = useState<Map<number, TestResult[]>>(new Map());
   const [expandedCases, setExpandedCases] = useState<Set<number>>(new Set());
@@ -18,7 +24,8 @@ export function TestInterface({
     const testCase = testCases[caseIndex];
     const testResults: TestResult[] = [];
 
-    for (const testFunction of testFunctions) {
+    for (const testFunctionName of testFunctionNames) {
+      const testFunction = testFunctions[testFunctionName];
       testResults.push(testFunction(testCase.sequence));
     }
 
@@ -40,6 +47,18 @@ export function TestInterface({
     </div>
   );
 }
+
+const testFunctions = {
+  autocorrelationTest2: autocorrelationTest(2),
+  autocorrelationTest8: autocorrelationTest(8),
+  blockFrequencyTest10: blockFrequencyTest(10),
+  blockLongestRunTest: blockLongestRunTest,
+  runsTest4: runsTest(4),
+  frequencyTest: frequencyTest,
+  wordFrequencyTest2: wordFrequencyTest(2),
+  wordFrequencyTest3: wordFrequencyTest(3),
+  wordFrequencyTest4: wordFrequencyTest(4),
+};
 
 interface TestCase {
   description: string;

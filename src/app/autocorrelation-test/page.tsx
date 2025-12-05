@@ -1,5 +1,3 @@
-"use client";
-
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
@@ -8,7 +6,6 @@ import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { aesGenerator } from "@/src/generators/aesGenerator";
 import { linearCongruentialGenerator } from "@/src/generators/linearCongruentialGenerator";
-import { autocorrelationTest } from "@/src/tests/autocorrelationTest";
 
 export default function Page() {
   return (
@@ -88,7 +85,7 @@ export default function Page() {
             sequence: linearCongruentialGenerator.generate(100),
           },
         ]}
-        testFunctions={[autocorrelationTest(2)]}
+        testFunctionNames={["autocorrelationTest2"]}
       />
       <p>
         There are two problems here. First is that 100 bits is not enough to
@@ -104,7 +101,7 @@ export default function Page() {
             sequence: linearCongruentialGenerator.generate(700000),
           },
         ]}
-        testFunctions={[autocorrelationTest(8)]}
+        testFunctionNames={["autocorrelationTest8"]}
       />
       <p>
         By comparison, a random string generated using AES (Advanced Encryption
@@ -117,7 +114,7 @@ export default function Page() {
             sequence: aesGenerator.generate(700000),
           },
         ]}
-        testFunctions={[autocorrelationTest(8)]}
+        testFunctionNames={["autocorrelationTest8"]}
       />
       <ArticleSectionTitle>Notes</ArticleSectionTitle>
       <p>

@@ -1,5 +1,3 @@
-"use client";
-
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
@@ -7,7 +5,6 @@ import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { allZerosThenAllOnesGenerator } from "@/src/generators/allZerosThenAllOnesGenerator";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
-import { blockFrequencyTest } from "@/src/tests/blockFrequencyTest";
 
 export default function Page() {
   return (
@@ -46,7 +43,7 @@ export default function Page() {
             sequence: allZerosThenAllOnesGenerator.generate(20),
           },
         ]}
-        testFunctions={[blockFrequencyTest(10)]}
+        testFunctionNames={["blockFrequencyTest10"]}
       />
       <p>
         This test, known as the <b>block frequency test</b>, is a slightly
@@ -61,7 +58,7 @@ export default function Page() {
             sequence: alternatingZerosAndOnesGenerator.generate(20),
           },
         ]}
-        testFunctions={[blockFrequencyTest(10)]}
+        testFunctionNames={["blockFrequencyTest10"]}
       />
       <ArticleSectionTitle>Notes</ArticleSectionTitle>
       <p>

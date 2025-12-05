@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
@@ -8,7 +6,6 @@ import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
-import { runsTest } from "@/src/tests/runsTest";
 
 export default function Page() {
   return (
@@ -58,7 +55,7 @@ export default function Page() {
             sequence: alternatingZerosAndOnesGenerator.generate(20),
           },
         ]}
-        testFunctions={[runsTest(4)]}
+        testFunctionNames={["runsTest4"]}
       />
       <p>
         You might ask why we only use 4 categories here and not 20 since we
@@ -82,7 +79,7 @@ export default function Page() {
             sequence: "0101010100110011000111010101010011001100011100001111",
           },
         ]}
-        testFunctions={[runsTest(4)]}
+        testFunctionNames={["runsTest4"]}
       />
       <ArticleSectionTitle>Notes</ArticleSectionTitle>
       <p>

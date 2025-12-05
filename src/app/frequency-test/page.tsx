@@ -1,5 +1,3 @@
-"use client";
-
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
@@ -8,7 +6,6 @@ import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { TestInterface } from "@/src/components/TestInterface";
 import { allZerosGenerator } from "@/src/generators/allZerosGenerator";
 import { allZerosThenAllOnesGenerator } from "@/src/generators/allZerosThenAllOnesGenerator";
-import { frequencyTest } from "@/src/tests/frequencyTest";
 
 export default function Page() {
   return (
@@ -68,7 +65,7 @@ export default function Page() {
             sequence: allZerosGenerator.generate(20),
           },
         ]}
-        testFunctions={[frequencyTest]}
+        testFunctionNames={["frequencyTest"]}
       />
       <p>
         This test, known as the <b>frequency test</b>, is the most basic check
@@ -83,7 +80,7 @@ export default function Page() {
             sequence: allZerosThenAllOnesGenerator.generate(20),
           },
         ]}
-        testFunctions={[frequencyTest]}
+        testFunctionNames={["frequencyTest"]}
       />
       <ArticleSectionTitle>Notes</ArticleSectionTitle>
       <p>
