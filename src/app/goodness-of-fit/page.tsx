@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { HiExternalLink } from "react-icons/hi";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
-import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { H1 } from "@/src/components/H1";
 
 export const metadata: Metadata = {
   title: "Goodness of Fit | Randomness Testing Guide",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ArticleWrapper>
-      <ArticleChapterTitle>Goodness of Fit</ArticleChapterTitle>
+      <H1>Goodness of Fit</H1>
       <ArticleSectionTitle>Fair Coin?</ArticleSectionTitle>
       <p>
         If we were to flip a coin 10 times, we would expect to see roughly 5

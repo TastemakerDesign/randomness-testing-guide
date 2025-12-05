@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { H1 } from "@/src/components/H1";
 import { ReferenceCard } from "@/src/components/ReferenceCard";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ArticleWrapper>
-      <ArticleChapterTitle>References</ArticleChapterTitle>
+      <H1>References</H1>
       <ReferenceCard
         title="The NIST Statistical Test Suite"
         authors="Terry Moore"

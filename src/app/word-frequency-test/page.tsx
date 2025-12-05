@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
-import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { H1 } from "@/src/components/H1";
 import { TestInterface } from "@/src/components/TestInterface";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
 import { linearCongruentialGenerator } from "@/src/generators/linearCongruentialGenerator";
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ArticleWrapper>
-      <ArticleChapterTitle>Word Frequency Test</ArticleChapterTitle>
+      <H1>Word Frequency Test</H1>
       <p>Let's say we have the following binary string.</p>
       <BlockMath math="s = \color{lightcoral}{01010101}\color{lightgreen}{00110011}\color{lightblue}{000111}\color{lightcoral}{01010101}\color{lightgreen}{00110011}\color{lightblue}{000111}\color{orchid}{00001111}" />
       <p>

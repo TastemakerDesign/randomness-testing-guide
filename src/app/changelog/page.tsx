@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
-import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { H1 } from "@/src/components/H1";
 
 export const metadata: Metadata = {
   title: "Changelog | Randomness Testing Guide",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ArticleWrapper>
-      <ArticleChapterTitle>Changelog</ArticleChapterTitle>
+      <H1>Changelog</H1>
       <ChangelogCard
         date="November 10, 2025"
         changes={[

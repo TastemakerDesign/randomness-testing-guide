@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
 import { VerificationTable } from "@/src/app/chi-squared-test-details/VerificationTable";
-import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { H1 } from "@/src/components/H1";
 
 export const metadata: Metadata = {
   title: "Chi-Squared Test Details | Randomness Testing Guide",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ArticleWrapper>
-      <ArticleChapterTitle>Chi-Squared Test Details</ArticleChapterTitle>
+      <H1>Chi-Squared Test Details</H1>
       <p>
         If we flip a coin 100 times and we get 60 heads and 40 tails, is the
         coin fair? The simplest way of testing this is using a z-score, which

@@ -1,12 +1,12 @@
 import { HiExternalLink } from "react-icons/hi";
-import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { H1 } from "@/src/components/H1";
 import { UserInputTestInterface } from "@/src/components/UserInputTestInterface";
 
 export default function Page() {
   return (
     <ArticleWrapper>
-      <ArticleChapterTitle>Introduction</ArticleChapterTitle>
+      <H1>Introduction</H1>
       <p>
         Welcome to the Randomness Testing Guide. This website is a beginner's
         guide to randomness testing with a focus on simplicity and

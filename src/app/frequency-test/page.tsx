@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
-import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { H1 } from "@/src/components/H1";
 import { TestInterface } from "@/src/components/TestInterface";
 import { allZerosGenerator } from "@/src/generators/allZerosGenerator";
 import { allZerosThenAllOnesGenerator } from "@/src/generators/allZerosThenAllOnesGenerator";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ArticleWrapper>
-      <ArticleChapterTitle>Frequency Test</ArticleChapterTitle>
+      <H1>Frequency Test</H1>
       <p>Let's say we have the following binary string.</p>
       <BlockMath math="s = 00000000000000000000" />
       <p>

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { InlineMath } from "react-katex";
-import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { H1 } from "@/src/components/H1";
 import { TestInterface } from "@/src/components/TestInterface";
 import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZerosAndOnesGenerator";
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ArticleWrapper>
-      <ArticleChapterTitle>Block Longest Run Test</ArticleChapterTitle>
+      <H1>Block Longest Run Test</H1>
       <p>
         In the NIST paper{" "}
         <i>

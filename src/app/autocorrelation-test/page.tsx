@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { BlockMath, InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
-import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { H1 } from "@/src/components/H1";
 import { TestInterface } from "@/src/components/TestInterface";
 import { aesGenerator } from "@/src/generators/aesGenerator";
 import { linearCongruentialGenerator } from "@/src/generators/linearCongruentialGenerator";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ArticleWrapper>
-      <ArticleChapterTitle>Autocorrelation Test</ArticleChapterTitle>
+      <H1>Autocorrelation Test</H1>
       <p>
         A linear congruential generator is defined by the following formula.
       </p>

@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { InlineMath } from "react-katex";
 import { ArticleBulletList } from "@/src/components/ArticleBulletList";
-import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleSectionTitle } from "@/src/components/ArticleSectionTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { H1 } from "@/src/components/H1";
 import { ReferenceCard } from "@/src/components/ReferenceCard";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ArticleWrapper>
-      <ArticleChapterTitle>Further Reading</ArticleChapterTitle>
+      <H1>Further Reading</H1>
       <ArticleSectionTitle>Diehard Tests</ArticleSectionTitle>
       <p>
         George Marsaglia was the most prolific researcher of random number
