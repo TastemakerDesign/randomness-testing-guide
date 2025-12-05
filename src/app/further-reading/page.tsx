@@ -1,10 +1,10 @@
 import { Metadata } from "next";
-import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
 import { IM } from "@/src/components/IM";
 import { ReferenceCard } from "@/src/components/ReferenceCard";
+import { UL } from "@/src/components/UL";
 
 export const metadata: Metadata = {
   title: "Further Reading | Randomness Testing Guide",
@@ -23,7 +23,7 @@ export default function Page() {
         of the tests (probably a reference to the movie "Die Hard"), Dr.
         Marsaglia was a bit of a memer.
       </p>
-      <ArticleBulletList>
+      <UL>
         <li>"It plays 200,000 games of craps..."</li>
         <li>"Choose 4000 random points in a cube of edge 1000."</li>
         <li>
@@ -44,7 +44,7 @@ export default function Page() {
           with the usual shipping/handling ruse. However, there may be a true
           charge for shipping, probably around $5.)
         </li>
-      </ArticleBulletList>
+      </UL>
       <ReferenceCard
         title="DIEHARD"
         authors="George Marsaglia"

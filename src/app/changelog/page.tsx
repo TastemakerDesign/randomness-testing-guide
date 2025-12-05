@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { H1 } from "@/src/components/H1";
+import { UL } from "@/src/components/UL";
 
 export const metadata: Metadata = {
   title: "Changelog | Randomness Testing Guide",
@@ -38,13 +38,13 @@ function ChangelogCard({ date, changes }: { date: string; changes: string[] }) {
       <time className="text-xl font-semibold text-white mb-3 block">
         {date}
       </time>
-      <ArticleBulletList>
+      <UL>
         {changes.map((change) => (
           <li key={change} className="text-neutral-200">
             {change}
           </li>
         ))}
-      </ArticleBulletList>
+      </UL>
     </div>
   );
 }

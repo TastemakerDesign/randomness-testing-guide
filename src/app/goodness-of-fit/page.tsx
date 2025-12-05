@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import { HiExternalLink } from "react-icons/hi";
-import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { BM } from "@/src/components/BM";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
 import { IM } from "@/src/components/IM";
+import { UL } from "@/src/components/UL";
 
 export const metadata: Metadata = {
   title: "Goodness of Fit | Randomness Testing Guide",
@@ -65,7 +65,7 @@ export default function Page() {
       </p>
       <BM math="\chi^{2} = \sum_{i} \frac{(O_{i} - E_{i})^2}{E_{i}}" />
       <p>In this formula,</p>
-      <ArticleBulletList>
+      <UL>
         <li>
           <IM math="O_{i}" /> is the observed probability of class{" "}
           <IM math="i" /> appearing.
@@ -74,12 +74,12 @@ export default function Page() {
           <IM math="E_{i}" /> is the expected probability of class{" "}
           <IM math="i" /> appearing.
         </li>
-      </ArticleBulletList>
+      </UL>
       <p>
         What is a class? In our example, we have two classes: heads and tails.
         So for a sequence containing 1 heads and 9 tails, we have the following.
       </p>
-      <ArticleBulletList>
+      <UL>
         <li>
           <IM math="O_{0} = 1" />
           <span className="ml-4 text-neutral-400">
@@ -104,7 +104,7 @@ export default function Page() {
             (we expected 5 tails out of 10)
           </span>
         </li>
-      </ArticleBulletList>
+      </UL>
       <p>
         Plugging these numbers into the formula, we get the following value for{" "}
         <IM math="\chi^{2}" />.
@@ -149,7 +149,7 @@ export default function Page() {
         It is very important to mention that the chi-squared test is only valid
         when both of the following assumptions to be true.
       </p>
-      <ArticleBulletList>
+      <UL>
         <li>
           The sample size must be large enough for the central limit theorem to
           be applicable. For the chi-squared test, the expected count per
@@ -160,7 +160,7 @@ export default function Page() {
           between observations, then the calculated probabilities will not be
           correct.
         </li>
-      </ArticleBulletList>
+      </UL>
       <H2>Fair Die?</H2>
       <p>
         If we were to roll a die 36 times, we would expect to see roughly 6
@@ -172,7 +172,7 @@ export default function Page() {
         Let's count the occurrences of each number in this sequence and compare
         them to what we would expect.
       </p>
-      <ArticleBulletList>
+      <UL>
         <li>
           <IM math="O_{1} = 4" />
           <span className="ml-4 text-neutral-400">(we observed 4 ones)</span>
@@ -200,7 +200,7 @@ export default function Page() {
         <li>
           <IM math="E_{1} = E_{2} = E_{3} = E_{4} = E_{5} = E_{6} = 6" />
         </li>
-      </ArticleBulletList>
+      </UL>
       <p>
         Now we can calculate the <IM math="\chi^{2}" /> statistic for this data.
       </p>

@@ -1,11 +1,11 @@
 import { Metadata } from "next";
-import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { BM } from "@/src/components/BM";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
 import { IM } from "@/src/components/IM";
 import { TestInterface } from "@/src/components/TestInterface";
+import { UL } from "@/src/components/UL";
 import { allZerosGenerator } from "@/src/generators/allZerosGenerator";
 import { allZerosThenAllOnesGenerator } from "@/src/generators/allZerosThenAllOnesGenerator";
 
@@ -30,7 +30,7 @@ export default function Page() {
         For a binary string of length <IM math="n" />, we would expect the
         number of 1s in the string to be <IM math="n/2" />.
       </p>
-      <ArticleBulletList>
+      <UL>
         <li>
           <IM math="O_{0} = 20" />
           <span className="ml-4 text-neutral-400">
@@ -55,7 +55,7 @@ export default function Page() {
             (we expected 10 ones out of 20 bits)
           </span>
         </li>
-      </ArticleBulletList>
+      </UL>
       <p>
         We can calculate the <IM math="\chi^{2}" /> with 1 degree of freedom as
         follows.

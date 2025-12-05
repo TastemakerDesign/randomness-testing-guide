@@ -1,11 +1,11 @@
 import { Metadata } from "next";
-import { ArticleBulletList } from "@/src/components/ArticleBulletList";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { BM } from "@/src/components/BM";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
 import { IM } from "@/src/components/IM";
 import { TestInterface } from "@/src/components/TestInterface";
+import { UL } from "@/src/components/UL";
 import { aesGenerator } from "@/src/generators/aesGenerator";
 import { linearCongruentialGenerator } from "@/src/generators/linearCongruentialGenerator";
 
@@ -40,7 +40,7 @@ export default function Page() {
         the previous bits, then the sequence isn't random.
       </p>
       <p>Therefore we want to calculate the following probabilities.</p>
-      <ArticleBulletList>
+      <UL>
         <li>
           <IM math="\text{Pr(next bit = 0 | current bit = 0)}" />
         </li>
@@ -53,7 +53,7 @@ export default function Page() {
         <li>
           <IM math="\text{Pr(next bit = 1 | current bit = 1)}" />
         </li>
-      </ArticleBulletList>
+      </UL>
       <p>
         However, this is exactly the same thing as calculating the frequencies
         of 00, 01, 10, and 11 in the binary string. This is extremely similar to
