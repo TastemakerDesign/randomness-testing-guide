@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { HiExternalLink } from "react-icons/hi";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
 import { BM } from "@/src/components/BM";
+import { ExternalLink } from "@/src/components/ExternalLink";
 import { H1 } from "@/src/components/H1";
 import { H2 } from "@/src/components/H2";
 import { IM } from "@/src/components/IM";
@@ -121,16 +121,10 @@ export default function Page() {
         Now what do we do with our <IM math="\chi^{2}" /> value? There is a
         magic formula that let's us calculate the probability that the observed
         distribution of values is equally or more different than the expected
-        distribution of values. (You can read more about this "magic" formula at{" "}
-        <a
-          href="https://matthewfeickert.github.io/Statistics-Notes/notebooks/Introductory/Chi-Squared-Distribution.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-300 hover:text-blue-200 inline-flex items-center gap-1"
-        >
-          in this article
-          <HiExternalLink className="shrink-0" />
-        </a>
+        distribution of values. (You can read more about this "magic" formula in{" "}
+        <ExternalLink href="https://matthewfeickert.github.io/Statistics-Notes/notebooks/Introductory/Chi-Squared-Distribution.html">
+          this article
+        </ExternalLink>
         .)
       </p>
       <p>

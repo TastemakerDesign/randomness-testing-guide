@@ -1,5 +1,5 @@
-import { HiExternalLink } from "react-icons/hi";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { ExternalLink } from "@/src/components/ExternalLink";
 import { H1 } from "@/src/components/H1";
 import { UserInputTestInterface } from "@/src/components/UserInputTestInterface";
 
@@ -25,43 +25,17 @@ export default function Page() {
         In the late 1990s, the National Institute of Standards and Technology
         (NIST) began development of the Advanced Encryption Standard (AES).
         Today, AES is used by{" "}
-        <a
-          href="https://nordvpn.com/features/vpn-encryption/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-300 hover:text-blue-200 inline-flex items-center gap-1"
-        >
+        <ExternalLink href="https://nordvpn.com/features/vpn-encryption/">
           many
-          <HiExternalLink className="shrink-0" />
-        </a>{" "}
-        <a
-          href="https://www.expressvpn.com/what-is-vpn/vpn-encryption"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-300 hover:text-blue-200 inline-flex items-center gap-1"
-        >
+        </ExternalLink>{" "}
+        <ExternalLink href="https://www.expressvpn.com/what-is-vpn/vpn-encryption">
           VPN
-          <HiExternalLink className="shrink-0" />
-        </a>{" "}
-        <a
-          href="https://mullvad.net/en/why-mullvad-vpn"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-300 hover:text-blue-200 inline-flex items-center gap-1"
-        >
+        </ExternalLink>{" "}
+        <ExternalLink href="https://mullvad.net/en/why-mullvad-vpn">
           providers
-          <HiExternalLink className="shrink-0" />
-        </a>{" "}
+        </ExternalLink>{" "}
         as part of the OpenVPN standard. It is also used by default by{" "}
-        <a
-          href="https://www.7-zip.org/7z.html"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-300 hover:text-blue-200 inline-flex items-center gap-1"
-        >
-          7-zip
-          <HiExternalLink className="shrink-0" />
-        </a>{" "}
+        <ExternalLink href="https://www.7-zip.org/7z.html">7-Zip</ExternalLink>{" "}
         for encrypting files. You can even see AES referenced in the "Security"
         tab of the Chrome developer tools on websites using HTTPS.
       </p>
