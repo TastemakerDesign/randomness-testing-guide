@@ -43,9 +43,7 @@ export function SidebarContents({
     >
       <div className="mb-8 hidden md:block">
         <Link href="/">
-          <h1
-            className={`text-2xl font-bold ${jetBrainsMono.className} cursor-pointer`}
-          >
+          <h1 className={`text-2xl font-bold ${jetBrainsMono.className}`}>
             Randomness Testing Guide
           </h1>
         </Link>
@@ -59,7 +57,7 @@ export function SidebarContents({
                 <li key={item.name}>
                   <button
                     onClick={toggleAppendix}
-                    className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors cursor-pointer"
+                    className="w-full flex items-center justify-between px-4 py-2 rounded-lg text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors"
                   >
                     <span>{item.name}</span>
                     <IoChevronDown

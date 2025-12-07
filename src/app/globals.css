@@ -1,17 +1,26 @@
 @import "tailwindcss";
 
-:root {
+/* Prevent letters from merging together */
+html {
   font-variant-ligatures: none;
 }
 
-/* Prevent KaTeX formulas from causing page-wide horizontal scroll */
-.katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
+/* Make the pointer correct for buttons */
+button, [role="button"] {
+  cursor: pointer;
+}
+button:disabled, [role="button"]:disabled {
+  cursor: not-allowed;
+}
+
+/* Prevent inline math from causing horizontal overflow */
+.katex {
   max-width: 100%;
 }
 
-/* Ensure inline math doesn't cause overflow either */
-.katex {
+/* Prevent block math from causing horizontal overflow */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
   max-width: 100%;
 }

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HiBars3, HiXMark } from "react-icons/hi2";
 import { jetBrainsMono } from "@/src/utils/fonts";
 
 export function MobileHeader({
@@ -14,38 +15,19 @@ export function MobileHeader({
     <header className="md:hidden fixed top-0 left-0 right-0 bg-neutral-900 text-white p-4 z-40 border-b border-neutral-800">
       <div className="flex items-center justify-between">
         <Link href="/" onClick={closeMenu}>
-          <h1
-            className={`text-xl font-bold ${jetBrainsMono.className} cursor-pointer`}
-          >
+          <h1 className={`text-xl font-bold ${jetBrainsMono.className}`}>
             Randomness Testing Guide
           </h1>
         </Link>
         <button
           onClick={toggleMenu}
-          className="p-2 hover:bg-neutral-800 rounded-lg transition-colors cursor-pointer"
+          className="p-2 hover:bg-neutral-800 rounded-lg transition-colors"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            {isOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
+          {isOpen ? (
+            <HiXMark className="w-6 h-6" />
+          ) : (
+            <HiBars3 className="w-6 h-6" />
+          )}
         </button>
       </div>
     </header>
