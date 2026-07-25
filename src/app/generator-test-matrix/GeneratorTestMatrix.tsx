@@ -10,7 +10,7 @@ import { linearCongruentialGenerator } from "@/src/generators/linearCongruential
 import { autocorrelationTest } from "@/src/tests/autocorrelationTest";
 import { blockFrequencyTest } from "@/src/tests/blockFrequencyTest";
 import { frequencyTest } from "@/src/tests/frequencyTest";
-import { runsTest } from "@/src/tests/runsTest";
+import { runLengthsTest } from "@/src/tests/runsTest";
 import { wordFrequencyTest } from "@/src/tests/wordFrequencyTest";
 
 export function GeneratorTestMatrix({ alpha }: { alpha: number }) {
@@ -94,7 +94,7 @@ const generators = [
 const tests = [
   { name: "Frequency Test", fn: frequencyTest },
   { name: "Block Frequency Test", fn: blockFrequencyTest(100) },
-  { name: "Runs Test", fn: runsTest(10) },
+  { name: "Run Lengths Test", fn: runLengthsTest(10) },
   { name: "Word Frequency Test", fn: wordFrequencyTest(2) },
   { name: "Autocorrelation Test", fn: autocorrelationTest(8) },
 ];

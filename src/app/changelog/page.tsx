@@ -13,6 +13,12 @@ export default function Page() {
     <ArticleWrapper>
       <H1>Changelog</H1>
       <ChangelogCard
+        date="July 24, 2026"
+        changes={[
+          '[Run Lengths Test] Renamed the article "Runs Test" to "Run Lengths Test" to avoid confusion with the test from the NIST paper',
+        ]}
+      />
+      <ChangelogCard
         date="November 10, 2025"
         changes={[
           '[Goodness of Fit] Changed the symbol "|" to the word "or" to avoid confusion with conditional probability',

@@ -6,7 +6,7 @@ import { autocorrelationTest } from "@/src/tests/autocorrelationTest";
 import { blockFrequencyTest } from "@/src/tests/blockFrequencyTest";
 import { blockLongestRunTest } from "@/src/tests/blockLongestRunTest";
 import { frequencyTest } from "@/src/tests/frequencyTest";
-import { runsTest } from "@/src/tests/runsTest";
+import { runLengthsTest } from "@/src/tests/runsTest";
 import { wordFrequencyTest } from "@/src/tests/wordFrequencyTest";
 import { TestResult } from "@/src/utils/TestResult";
 
@@ -53,7 +53,7 @@ const testFunctions = {
   autocorrelationTest8: autocorrelationTest(8),
   blockFrequencyTest10: blockFrequencyTest(10),
   blockLongestRunTest: blockLongestRunTest,
-  runsTest4: runsTest(4),
+  runsTest4: runLengthsTest(4),
   frequencyTest: frequencyTest,
   wordFrequencyTest2: wordFrequencyTest(2),
   wordFrequencyTest3: wordFrequencyTest(3),

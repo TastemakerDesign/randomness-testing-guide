@@ -1,7 +1,7 @@
 import { chiSquaredPValue } from "@/src/utils/chiSquaredPValue";
 
 // Curry the function to separate the test parameters from the actual input.
-export function runsTest(numberOfRunsCategories: number) {
+export function runLengthsTest(numberOfRunsCategories: number) {
   return function _(randomString: string) {
     const n = randomString.length;
     const runLengths: number[] = [];
@@ -39,7 +39,7 @@ export function runsTest(numberOfRunsCategories: number) {
     const degreesOfFreedom = numberOfRunsCategories - 1;
     const pValue = chiSquaredPValue(chiSquared, degreesOfFreedom);
     return {
-      testName: "Runs Test",
+      testName: "Run Lengths Test",
       chiSquared: chiSquared.toFixed(4),
       degreesOfFreedom: degreesOfFreedom,
       pValue: pValue.toFixed(4),

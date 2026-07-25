@@ -66,10 +66,10 @@ export default function Page() {
       />
       <p>
         This test, known as the <b>word frequency test</b>, is a significantly
-        more difficult to pass than the runs test. Instead of concatenating
-        predetermined strings, we must use a mathematical process that has
-        seemingly random behavior. One very simple off-the-shelf method for
-        doing this is using a <b>linear congruential generator</b>, which is
+        more difficult to pass than the run lengths test. Instead of
+        concatenating predetermined strings, we must use a mathematical process
+        that has seemingly random behavior. One very simple off-the-shelf method
+        for doing this is using a <b>linear congruential generator</b>, which is
         defined by the following formula.
       </p>
       <BM math="X_{n+1} = (aX_n + c) \bmod m" />

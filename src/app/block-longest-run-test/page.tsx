@@ -198,8 +198,8 @@ export default function Page() {
         without saying which page the formula came from.
       </p>
       <p>
-        The benefit of using the "runs test" described on this website is that
-        it avoids the need for arbitrary thresholding and doesn't require
+        The benefit of using the "run lengths test" described on this website is
+        that it avoids the need for arbitrary thresholding and doesn't require
         knowing or computing any of those magic numbers. Although the two tests
         are not strictly equivalent, they tend to succeed and fail on the same
         test cases, which indicates that they serve roughly the same purpose.
@@ -216,7 +216,7 @@ export default function Page() {
         ]}
         testFunctionNames={["blockLongestRunTest", "runsTest4"]}
       />
-      <p>Both tests fail to catch the expected runs test case.</p>
+      <p>Both tests fail to catch the expected run lengths test case.</p>
       <TestInterface
         testCases={[
           {

@@ -10,7 +10,7 @@ import { alternatingZerosAndOnesGenerator } from "@/src/generators/alternatingZe
 import { expectedRunsDistributionGenerator } from "@/src/generators/expectedRunsDistributionGenerator";
 
 export const metadata: Metadata = {
-  title: "Runs Test | Randomness Testing Guide",
+  title: "Run Lengths Test | Randomness Testing Guide",
   description:
     "Test whether a sequence of bits is random based on the number of transitions between 0s and 1s.",
 };
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ArticleWrapper>
-      <H1>Runs Test</H1>
+      <H1>Run Lengths Test</H1>
       <p>Let's say we have the following binary string.</p>
       <BM math="s = 01010101010101010101" />
       <p>
@@ -73,7 +73,7 @@ export default function Page() {
         formula more obvious.
       </p>
       <p>
-        This test, known as the <b>runs test</b>, is a significantly more
+        This test, known as the <b>run lengths test</b>, is a significantly more
         difficult to pass than the frequency test. However, it fails on the
         following binary string that was obviously not randomly generated.
       </p>
@@ -93,8 +93,8 @@ export default function Page() {
         strings due to the central limit theorem becoming more applicable with
         larger sample sizes. However, for smaller binary strings, the tests may
         exhibit higher rates of false positive and false negative errors. The
-        runs test presented in this guide could potentially be modified for
-        better accuracy on smaller strings. See{" "}
+        run lengths test presented in this guide could potentially be modified
+        for better accuracy on smaller strings. See{" "}
         <Link
           href="/block-longest-run-test"
           className="text-blue-300 hover:text-blue-200 hover:underline"

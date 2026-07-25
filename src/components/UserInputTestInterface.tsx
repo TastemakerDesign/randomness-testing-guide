@@ -5,7 +5,7 @@ import { TestResultDisplay } from "@/src/components/TestResultDisplay";
 import { autocorrelationTest } from "@/src/tests/autocorrelationTest";
 import { blockFrequencyTest } from "@/src/tests/blockFrequencyTest";
 import { frequencyTest } from "@/src/tests/frequencyTest";
-import { runsTest } from "@/src/tests/runsTest";
+import { runLengthsTest } from "@/src/tests/runsTest";
 import { wordFrequencyTest } from "@/src/tests/wordFrequencyTest";
 import { TestResult } from "@/src/utils/TestResult";
 
@@ -89,7 +89,7 @@ export function UserInputTestInterface({
 const testFunctions = {
   frequencyTest: frequencyTest,
   blockFrequencyTest10: blockFrequencyTest(10),
-  runsTest4: runsTest(4),
+  runsTest4: runLengthsTest(4),
   wordFrequencyTest4: wordFrequencyTest(4),
   autocorrelationTest4: autocorrelationTest(4),
 };
